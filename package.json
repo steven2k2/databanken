@@ -1,0 +1,40 @@
+{
+  "name": "databanken",
+  "version": "1.0.0",
+  "description": "Site mockup.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steven2k2/databanken.git"
+  },
+  "keywords": [
+    "nodejs",
+    "ejs",
+    "express",
+    "mockup"
+  ],
+  "author": "Steven Thompson",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.1",
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "sass": "^1.81.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/steven2k2/databanken/issues"
+  },
+  "homepage": "https://github.com/steven2k2/databanken#readme"
+}

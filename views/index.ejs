@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support <%= company.name %> through donations, volunteering, or partnerships to help bridge the digital divide.">
+    <title>Support Us - <%= company.name %></title>
+    <link rel="stylesheet" href="css/main.css">
+    <%- include('partials/favicon-stylesheet') %>
+</head>
+<body>
+
+<%- include('partials/jumbotron') %>
+<%- include('partials/navbar') %>
+
+<!-- Main Content -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-8 mt-3">
+            <p>
+                <%= company.name %> is dedicated to bridging the digital divide by providing affordable, refurbished computers to individuals and organisations in need.
+            </p>
+            <p>
+                Join us in creating a future where everyone has access to the technology they need. Whether you’re looking for a computer or want to support our mission, we’re here to help.
+            </p>
+            <div class="d-flex gap-2">
+                <a href="/apply" class="btn btn-primary text-white">Apply for a Computer</a>
+                <a href="/donate" class="btn btn-outline-secondary">Donate Now</a>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-4  mt-3">
+            <h3>Quick Links</h3>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="/stocklist">Stocklist</a></li>
+                <li class="list-group-item"><a href="/e-bay">e-bay</a></li>
+                <li class="list-group-item"><a href="/donate">Donate</a></li>
+                <li class="list-group-item"><a href="/about-us">About</a></li>
+                <li class="list-group-item"><a href="/our-shop">Our Shop</a></li>
+                <li class="list-group-item"><a href="/apply">Get a Refurbished Computer</a></li>
+                <li class="list-group-item"><a href="/volunteering">Volunteer with Us</a></li>
+                <li class="list-group-item"><a href="/donate">Donate Your Computer</a></li>
+                <li class="list-group-item"><a href="/e-waste">E-Waste Recycling</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
