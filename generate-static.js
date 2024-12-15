@@ -37,6 +37,8 @@ console.log('Public assets copied.');
 // Define pages to generate
 const pages = [
     { template: 'index.ejs', output: 'index.html', data: { company: config.company, activeKey: 'home' } },
+    { template: 'e-bay.ejs', output: 'e-bay.html', data: { company: config.company, activeKey: 'e-bay' } },
+
     { template: 'stocklist.ejs', output: 'stocklist.html', data: { company: config.company, activeKey: 'stock-list' } },
 ];
 
