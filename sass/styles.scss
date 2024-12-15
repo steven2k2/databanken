@@ -1,0 +1,35 @@
+//Custom styles
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.navbar {
+  //box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  margin-top: 20px;
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+}
+
+.site-info {
+  text-transform: uppercase;
+}
+
+
