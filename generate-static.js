@@ -3,6 +3,9 @@ const path = require('path');
 const ejs = require('ejs');
 const config = require('./config.json');
 
+// Base path for deployment
+const basePath = '/databanken/';
+
 // Set up paths
 const viewsDir = path.join(__dirname, 'views');
 const publicDir = path.join(__dirname, 'public');
@@ -36,10 +39,9 @@ console.log('Public assets copied.');
 
 // Define pages to generate
 const pages = [
-    { template: 'index.ejs', output: 'index.html', data: { company: config.company, activeKey: 'home' } },
-    { template: 'e-bay.ejs', output: 'e-bay.html', data: { company: config.company, activeKey: 'e-bay' } },
-
-    { template: 'stocklist.ejs', output: 'stocklist.html', data: { company: config.company, activeKey: 'stock-list' } },
+    { template: 'index.ejs', output: 'index.html', data: { company: config.company, activeKey: 'home', basePath } },
+    { template: 'e-bay.ejs', output: 'e-bay.html', data: { company: config.company, activeKey: 'e-bay', basePath } },
+    { template: 'stocklist.ejs', output: 'stocklist.html', data: { company: config.company, activeKey: 'stock-list', basePath } },
 ];
 
 // Generate static files
@@ -56,3 +58,5 @@ pages.forEach((page) => {
         console.log(`Generated ${page.output}`);
     });
 });
+
+console.log('Static files generated successfully!');

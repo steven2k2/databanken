@@ -5,6 +5,8 @@ const PORT = 3000;
 require('dotenv').config();
 const pages = require('./pages'); // Import the pages Map
 
+app.locals.basePath = '/databanken/';
+
 
 // Set the company information from the JSON file
 app.locals.company = config.company;
