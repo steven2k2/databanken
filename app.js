@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const fs = require('fs'); // File system module for accessing JSON files
 const config = require('./config.json'); // Load the JSON configuration
 const PORT = 3000;
 require('dotenv').config();
@@ -33,6 +34,23 @@ app.use((req, res, next) => {
     }
 
     next();
+});
+
+// Middleware to simulate API calls with static JSON files
+app.get('/databanken/api/:filename', (req, res) => {
+    const { filename } = req.params;
+    const filePath = path.join(__dirname, 'public', 'api', `${filename}.json`);
+
+    // Serve the JSON file if it exists
+    fs.access(filePath, fs.constants.F_OK, (err) => {
+        if (err) {
+            console.error(`File not found: ${filePath}`);
+            return res.status(404).json({ error: 'File not found' });
+        }
+
+        // Send the JSON content
+        res.sendFile(filePath);
+    });
 });
 
 // Set up routes with the base path

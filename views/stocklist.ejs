@@ -34,6 +34,8 @@
                 <!-- Content will be dynamically populated -->
             </div>
         </div>
+
+        <ul id="products-list"></ul>
     </div>
     <p class="mt-4 text-muted">Each computer comes with Linux Mint (<%= company.name %> Edition), necessary accessories, and a 3-month warranty.</p>
     <p class="text-muted">Laptops are limited to one per person with a valid concession card.</p>
@@ -80,6 +82,21 @@
                 console.error('Failed to load stocklist:', err);
             });
     });
+</script>
+
+<script>
+    fetch('<%= basePath %>api/products')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Products:', data.products);
+            const container = document.getElementById('products-list');
+            data.products.forEach(product => {
+                const item = document.createElement('li');
+                item.textContent = `${product.name} - $${product.price}`;
+                container.appendChild(item);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
 </script>
 
 <!-- Bootstrap JS -->
