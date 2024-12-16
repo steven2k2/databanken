@@ -25,7 +25,7 @@ app.use((req, res, next) => {
     const page = pages.get(pageKey);
 
     if (page) {
-        res.locals.title = page.title;
+        res.locals.title = page.title || 'MISSING TITLE';
         res.locals.subtitle = page.subtitle || '';
         res.locals.keywords = page.keywords || '';
         res.locals.description = page.description || '';
