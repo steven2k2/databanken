@@ -19,24 +19,27 @@ if (!fs.existsSync(paths.dist)) {
     console.log(`Created directory: ${paths.dist}`);
 }
 
-// Function to copy files recursively from `public` to `dist/public`
-const copyFiles = (src, dest) => {
-    if (!fs.existsSync(dest)) {
-        fs.mkdirSync(dest, { recursive: true });
-    }
+// Function to copy files and preserve directory structure
+const copyFilesWithStructure = (src, dest) => {
     fs.readdirSync(src).forEach((file) => {
         const srcPath = path.join(src, file);
         const destPath = path.join(dest, file);
         if (fs.lstatSync(srcPath).isDirectory()) {
-            copyFiles(srcPath, destPath);
+            // Ensure the directory exists in the destination
+            if (!fs.existsSync(destPath)) {
+                fs.mkdirSync(destPath, { recursive: true });
+            }
+            // Recursively copy the contents
+            copyFilesWithStructure(srcPath, destPath);
         } else {
+            // Copy the file
             fs.copyFileSync(srcPath, destPath);
         }
     });
 };
 
-console.log('Copying public assets...');
-copyFiles(paths.public, path.join(paths.dist, 'public'));
+console.log('Copying public assets to the root of dist with structure...');
+copyFilesWithStructure(paths.public, paths.dist);
 console.log('Public assets copied successfully.');
 
 // Define pages to generate
