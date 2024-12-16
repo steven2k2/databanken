@@ -6,17 +6,20 @@ const config = require('./config.json');
 // Base path for deployment
 const basePath = '/databanken/';
 
-// Set up paths
-const viewsDir = path.join(__dirname, 'views');
-const publicDir = path.join(__dirname, 'public');
-const distDir = path.join(__dirname, 'dist');
+// Paths configuration
+const paths = {
+    views: path.join(__dirname, 'views'),
+    public: path.join(__dirname, 'public'),
+    dist: path.join(__dirname, 'dist'),
+};
 
-// Ensure dist directory exists
-if (!fs.existsSync(distDir)) {
-    fs.mkdirSync(distDir);
+// Ensure `dist` directory exists
+if (!fs.existsSync(paths.dist)) {
+    fs.mkdirSync(paths.dist, { recursive: true });
+    console.log(`Created directory: ${paths.dist}`);
 }
 
-// Function to copy files recursively
+// Function to copy files recursively from `public` to `dist/public`
 const copyFiles = (src, dest) => {
     if (!fs.existsSync(dest)) {
         fs.mkdirSync(dest, { recursive: true });
@@ -32,10 +35,9 @@ const copyFiles = (src, dest) => {
     });
 };
 
-// Copy public assets to dist
 console.log('Copying public assets...');
-copyFiles(publicDir, path.join(distDir, 'public'));
-console.log('Public assets copied.');
+copyFiles(paths.public, path.join(paths.dist, 'public'));
+console.log('Public assets copied successfully.');
 
 // Define pages to generate
 const pages = [
@@ -47,17 +49,17 @@ const pages = [
 ];
 
 // Generate static files
-pages.forEach((page) => {
-    const templatePath = path.join(viewsDir, page.template);
-    const outputPath = path.join(distDir, page.output);
+pages.forEach(({ template, output, data }) => {
+    const templatePath = path.join(paths.views, template);
+    const outputPath = path.join(paths.dist, output);
 
-    ejs.renderFile(templatePath, page.data, {}, (err, html) => {
+    ejs.renderFile(templatePath, data, {}, (err, html) => {
         if (err) {
-            console.error(`Error rendering ${page.template}:`, err);
+            console.error(`Error rendering ${template}:`, err);
             return;
         }
         fs.writeFileSync(outputPath, html, 'utf-8');
-        console.log(`Generated ${page.output}`);
+        console.log(`Generated: ${output}`);
     });
 });
 
