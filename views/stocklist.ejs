@@ -24,7 +24,7 @@
                 <% const laptops = [
                     {
                         id: '11304',
-                        name: '1) HP Probook 430 G4',
+                        name: 'HP Probook 430 G4',
                         storage: '128GB SSD',
                         processor: 'i5-7200 2.5',
                         optical: '',
@@ -38,7 +38,7 @@
                     },
                     {
                         id: '11316',
-                        name: '2) HP ProBook 430 G4',
+                        name: 'HP ProBook 430 G4',
                         storage: '128GB SSD',
                         processor: 'i5-7200 2.5',
                         optical: '',
@@ -209,9 +209,62 @@
                 will be charged our full market price.</p>
             <div class="row">
                 <% const desktops = [
-                    {id: '11282', name: 'Hewlett-Packard HP2210', processor: 'Intel i7-26003.8', storage: '500 GB HDD', ram: '4GB', monitor: '24" monitor', concessionPrice: 95.0, fullPrice: 142.50, image: 'images/desktop-1.jpg'},
-                    {id: '11202', name: 'HP Prodesk 600 G1 SFF', processor: 'Intel i5-45903.30', storage: '240GB SSD', ram: '8GB', monitor: '19" monitor', concessionPrice: 110.0, fullPrice: 165.0, image: 'images/desktop-2.jpg'},
-                    {id: '11288', name: 'Lenovo M700', processor: 'Intel i5-64002.70', storage: '256GB SSD', ram: '8GB', monitor: '22" monitor', concessionPrice: 125.0, fullPrice: 187.50, image: 'images/desktop-3.jpg'}
+                    {
+                        id: '11282',
+                        name: 'Hewlett-Packard HP2210',
+                        storage: '500 GB HDD',
+                        processor: 'i7-26003.8',
+                        optical: 'DVD-ROM',
+                        ram: '4GB',
+                        battery: null ,
+                        screen: '23.8"',
+                        extras: null,
+                        concessionPrice: 95,
+                        fullPrice: 142.50,
+                        image: 'images/stock/20241025_124948_450x600_.jpg'
+                    },
+                    {
+                        id: '11202',
+                        name: 'HP Prodesk 600 G1 SFF',
+                        storage: '240 GB SSD',
+                        processor: 'i5-4590 3.30 Ghz',
+                        optical: 'Combo',
+                        ram: '8GB',
+                        battery: null ,
+                        screen: '19"',
+                        extras: 'Extra 1 TB hard disk',
+                        concessionPrice: 110.0,
+                        fullPrice: 165.0,
+                        image: 'images/stock/20240817_124330_450x600_1.jpg'
+                    },
+                    {
+                        id: '11288',
+                        name: 'Lenovo M700',
+                        storage: '256 GB SSD',
+                        processor: '5-64002.70 GHz',
+                        optical: 'Combo',
+                        ram: '8GB',
+                        battery: null ,
+                        screen: '19"',
+                        extras: 'Extra 1 TB hard disk',
+                        concessionPrice: 125.0,
+                        fullPrice: 187.50,
+                        image: 'images/stock/20241123_155119_450x600_1.jpg'
+                    },
+                    {
+                        id: '11327',
+                        name: 'Lenovo M700',
+                        storage: '256 GB SSD',
+                        processor: 'i5-6400 3.30 GHz',
+                        optical: 'DVD-RW',
+                        ram: '8GB',
+                        battery: null ,
+                        screen: '24"',
+                        extras: 'Wifi, 2 GB video card, widescreen',
+                        concessionPrice: 190.0,
+                        fullPrice: 285.0,
+                        image: 'images/stock/20241207_120020_450x600_.jpg'
+                    },
                 ]; %>
                 <% desktops.forEach(item => { %>
                     <%- include('partials/StockItem', { item: item }) %>

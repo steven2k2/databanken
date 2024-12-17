@@ -1,29 +1,32 @@
 <div class="col-md-4 mb-4">
     <div class="card h-100 shadow-sm">
-        <img src="<%= item.image || 'images/no-image-laptop.jpg' %>"
+        <!-- Placeholder logic for images -->
+        <img src="<%= item.image || 'images/no-image-available.jpg' %>"
              class="card-img-top"
-             alt="<%= item.image ? item.name : 'No Image Available' %>">
+             alt="<%= item.name %>">
+
         <div class="card-body">
             <h5 class="card-title"><%= item.name %></h5>
-            <p class="card-text">
-                <strong>Processor:</strong> <%= item.processor %><br>
-                <strong>Storage:</strong> <%= item.storage %><br>
-                <strong>Optical:</strong> <%= item.optical || "No optical drive" %><br>
-                <strong>RAM:</strong> <%= item.ram %><br>
-                <strong>Battery:</strong> <%= item.battery ||  '-' %> hours<br>
+            <ul class="list-unstyled">
+                <li><strong>Processor:</strong> <%= item.processor %></li>
+                <li><strong>Storage:</strong> <%= item.storage %></li>
+                <li><strong>RAM:</strong> <%= item.ram %></li>
                 <% if (item.screen) { %>
-                    <strong>Screen:</strong> <%= item.screen %>
-                <% } else { %>
-                    <strong>Monitor:</strong> <%= item.monitor %>
+                    <li><strong>Screen:</strong> <%= item.screen %></li>
+                <% } else if (item.monitor) { %>
+                    <li><strong>Monitor:</strong> <%= item.monitor %></li>
                 <% } %>
-
-            </p>
-            <p><%= item.extras %></p>
+            </ul>
         </div>
-        <div class="card-footer bg-white">
-            <span class="text-primary">Concession Price: $<%= item.concessionPrice.toFixed(2) %></span>
+
+        <div class="card-footer bg-white d-flex justify-content-between">
+            <span class="text-primary fw-bold">
+                Concession Price: $<%= item.concessionPrice.toFixed(2) %>
+            </span>
             <% if (item.fullPrice) { %>
-                <span class="text-secondary float-end">Full Price: $<%= item.fullPrice.toFixed(2) %></span>
+                <span class="text-secondary small">
+                    Full Price: $<%= item.fullPrice.toFixed(2) %>
+                </span>
             <% } %>
         </div>
     </div>
