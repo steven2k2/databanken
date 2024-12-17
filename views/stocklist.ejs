@@ -14,28 +14,47 @@
 <%- include('partials/navbar') %>
 
 <main class="container my-5">
-    <h2 class="text-center mb-4">Available Stock</h2>
+    <h2 class="mb-4">Available Stock</h2>
     <div class="row">
+        <!-- Laptops Section -->
+        <div class="col-md-12">
+            <h3 class="mt-2">Laptops</h3>
+            <p>Laptops are first come, first served. You must have a valid concession card to purchase a laptop, and there is a one per person limit.</p>
+            <div class="row">
+                <% const laptops = [
+                    {id: '11304', name: 'HP ProBook 430 G4', processor: 'Intel i5-7200U 2.50GHz', optical: '',storage: '128GB SSD', ram: '8GB', battery: 6.41, screen: '13.2"', concessionPrice: 150.0, image: 'images/laptop-1.jpg'},
+
+                    {id: '11316', name: 'HP Elitebook 850 G6', processor: 'Intel i5-8265u 1.6GHz',optical: '', storage: '128GB SSD', ram: '8GB', screen: '13.2"', concessionPrice: 150.0, image: 'images/20241129_132916_800x600_.jpg'},
+                    {id: '11329', name: 'ASUSTek VivoBook', processor: 'Pentium N6000 1.10',optical: '', storage: '256 GB NVMe', ram: '8GB', screen: '15.5"', concessionPrice: 200.0, image: ''}
+
+
+                ]; %>
+                <% laptops.forEach(item => { %>
+                    <%- include('partials/StockItem', { item: item }) %>
+                <% }); %>
+            </div>
+        </div>
+
+
         <!-- Desktops Section -->
-        <div class="col-md-6">
+        <div class="col-md-12">
             <h3 class="mt-2">Desktops</h3>
             <p>The listed concession price is only available to concession card holders. Please have a valid concession card ready when you make your purchase, you may purchase a desktop computer without a concession card however you
                 will be charged our full market price.</p>
-            <div class="list-group" id="desktops">
-                <!-- Content will be dynamically populated -->
+            <div class="row">
+                <% const desktops = [
+                    {id: '11282', name: 'Hewlett-Packard HP2210', processor: 'Intel i7-26003.8', storage: '500 GB HDD', ram: '4GB', monitor: '24" monitor', concessionPrice: 95.0, fullPrice: 142.50, image: 'images/desktop-1.jpg'},
+                    {id: '11202', name: 'HP Prodesk 600 G1 SFF', processor: 'Intel i5-45903.30', storage: '240GB SSD', ram: '8GB', monitor: '19" monitor', concessionPrice: 110.0, fullPrice: 165.0, image: 'images/desktop-2.jpg'},
+                    {id: '11288', name: 'Lenovo M700', processor: 'Intel i5-64002.70', storage: '256GB SSD', ram: '8GB', monitor: '22" monitor', concessionPrice: 125.0, fullPrice: 187.50, image: 'images/desktop-3.jpg'}
+                ]; %>
+                <% desktops.forEach(item => { %>
+                    <%- include('partials/StockItem', { item: item }) %>
+                <% }); %>
             </div>
         </div>
 
-        <!-- Laptops Section -->
-        <div class="col-md-6">
-            <h3 class="mt-2">Laptops</h3>
-            <p>Laptops are first come, first served. You must have a valid concession card to purchase a laptop, and there is a one per person limit.</p>
-            <div class="list-group" id="laptops">
-                <!-- Content will be dynamically populated -->
-            </div>
-        </div>
 
-        <ul id="products-list"></ul>
+
     </div>
     <p class="mt-4 text-muted">Each computer comes with Linux Mint (<%= company.name %> Edition), necessary accessories, and a 3-month warranty.</p>
     <p class="text-muted">Laptops are limited to one per person with a valid concession card.</p>
@@ -84,20 +103,6 @@
     });
 </script>
 
-<script>
-    fetch('<%= basePath %>api/products')
-        .then(response => response.json())
-        .then(data => {
-            console.log('Products:', data.products);
-            const container = document.getElementById('products-list');
-            data.products.forEach(product => {
-                const item = document.createElement('li');
-                item.textContent = `${product.name} - $${product.price}`;
-                container.appendChild(item);
-            });
-        })
-        .catch(error => console.error('Error fetching data:', error));
-</script>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

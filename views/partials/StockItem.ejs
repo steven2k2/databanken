@@ -1,0 +1,28 @@
+<div class="col-md-4 mb-4">
+    <div class="card h-100 shadow-sm">
+        <img src="<%= item.image || 'images/no-image-laptop.jpg' %>"
+             class="card-img-top"
+             alt="<%= item.image ? item.name : 'No Image Available' %>">
+        <div class="card-body">
+            <h5 class="card-title"><%= item.name %></h5>
+            <p class="card-text">
+                <strong>Processor:</strong> <%= item.processor %><br>
+                <strong>Storage:</strong> <%= item.storage %><br>
+                <strong>Optical:</strong> <%= item.optical || "No optical drive" %><br>
+                <strong>RAM:</strong> <%= item.ram %><br>
+                <strong>Battery:</strong> <%= item.battery ||  '-' %> hours<br>
+                <% if (item.screen) { %>
+                    <strong>Screen:</strong> <%= item.screen %>
+                <% } else { %>
+                    <strong>Monitor:</strong> <%= item.monitor %>
+                <% } %>
+            </p>
+        </div>
+        <div class="card-footer bg-white">
+            <span class="text-primary">Concession Price: $<%= item.concessionPrice.toFixed(2) %></span>
+            <% if (item.fullPrice) { %>
+                <span class="text-secondary float-end">Full Price: $<%= item.fullPrice.toFixed(2) %></span>
+            <% } %>
+        </div>
+    </div>
+</div>

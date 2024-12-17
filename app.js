@@ -37,7 +37,7 @@ app.use((req, res, next) => {
 });
 
 // Middleware to simulate API calls with static JSON files
-app.get('/databanken/api/:filename', (req, res) => {
+app.get('api/:filename', (req, res) => {
     const { filename } = req.params;
     const filePath = path.join(__dirname, 'public', 'api', `${filename}.json`);
 

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const ejs = require('ejs');
+const beautify = require('js-beautify').html; // Import js-beautify for HTML formatting
 const config = require('./config.json');
 
 // Base path for deployment
@@ -25,14 +26,11 @@ const copyFilesWithStructure = (src, dest) => {
         const srcPath = path.join(src, file);
         const destPath = path.join(dest, file);
         if (fs.lstatSync(srcPath).isDirectory()) {
-            // Ensure the directory exists in the destination
             if (!fs.existsSync(destPath)) {
                 fs.mkdirSync(destPath, { recursive: true });
             }
-            // Recursively copy the contents
             copyFilesWithStructure(srcPath, destPath);
         } else {
-            // Copy the file
             fs.copyFileSync(srcPath, destPath);
         }
     });
@@ -51,6 +49,14 @@ const pages = [
     { template: 'stocklist.ejs', output: 'stocklist.html', data: { company: config.company, activeKey: 'stock-list', basePath } },
 ];
 
+// Beautify options
+const beautifyOptions = {
+    indent_size: 2,
+    space_in_empty_paren: true,
+    preserve_newlines: false,
+    wrap_line_length: 80,
+};
+
 // Generate static files
 pages.forEach(({ template, output, data }) => {
     const templatePath = path.join(paths.views, template);
@@ -61,9 +67,13 @@ pages.forEach(({ template, output, data }) => {
             console.error(`Error rendering ${template}:`, err);
             return;
         }
-        fs.writeFileSync(outputPath, html, 'utf-8');
-        console.log(`Generated: ${output}`);
+
+        // Prettify the generated HTML
+        const formattedHtml = beautify(html, beautifyOptions);
+
+        fs.writeFileSync(outputPath, formattedHtml, 'utf-8');
+        console.log(`Generated: ${output} (prettified)`);
     });
 });
 
-console.log('Static files generated successfully!');
+console.log('Static files generated and prettified successfully!');
