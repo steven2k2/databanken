@@ -22,10 +22,176 @@
             <p>Laptops are first come, first served. You must have a valid concession card to purchase a laptop, and there is a one per person limit.</p>
             <div class="row">
                 <% const laptops = [
-                    {id: '11304', name: 'HP ProBook 430 G4', processor: 'Intel i5-7200U 2.50GHz', optical: '',storage: '128GB SSD', ram: '8GB', battery: 6.41, screen: '13.2"', concessionPrice: 150.0, image: 'images/20241123_154320_800x600_.jpg'},
+                    {
+                        id: '11304',
+                        name: '1) HP Probook 430 G4',
+                        storage: '128GB SSD',
+                        processor: 'i5-7200 2.5',
+                        optical: '',
+                        ram: '8GB',
+                        battery: 6.41,
+                        screen: '13.2"',
+                        extras: 'Built in Wifi, Bluetooth, Webcam adapter',
+                        concessionPrice: 150.0,
+                        fullPrice: null,
+                        image: 'images/stock/20241123_154320_800x600_.jpg'
+                    },
+                    {
+                        id: '11316',
+                        name: '2) HP ProBook 430 G4',
+                        storage: '128GB SSD',
+                        processor: 'i5-7200 2.5',
+                        optical: '',
+                        ram: '8GB',
+                        battery: 4.30,
+                        screen: '13.2"',
+                        extras: '',
+                        concessionPrice: 150.0,
+                        fullPrice: null,
+                        image: 'images/stock/20241129_132916_800x600_.jpg'
+                    },
+                    {
+                        id: '11329',
+                        name: 'ASUSTek VivoBook',
+                        storage: '256 GB NVMe',
+                        processor: 'Pentium N6000 1.10',
+                        optical: '',
+                        ram: '8GB',
+                        battery: 8.42,
+                        screen: '15.5"',
+                        extras: 'Built in Wifi, Bluetooth and Webcam and adapter',
+                        concessionPrice: 200.0,
+                        fullPrice: null,
+                        image: ''
+                    },
+                    {
+                        id: '11250 B',
+                        name: 'HP ProBook 450 G5',
+                        storage: '256 GB NVMe',
+                        processor: 'i5-8250U 1.60',
+                        optical: '',
+                        ram: '8GB',
+                        battery: 4.27 ,
+                        screen: '15.5"',
+                        extras: 'Built in Wifi, Bluetooth, Webcam adapter',
+                        concessionPrice: 200.0,
+                        fullPrice: null,
+                        image: 'images/stock/20240920_110041_800x600_.jpg'
+                    },
+                    {
+                        id: '11315',
+                        name: 'HP ProBook 650 G2',
+                        storage: '256 GB SSD',
+                        processor: 'i7-6600U 2.60',
+                        optical: 'Combo',
+                        ram: '16GB',
+                        battery: 3.44,
+                        screen: '15.5"',
+                        extras: 'Built in Wifi, Bluetooth and Webcam and adapter',
+                        concessionPrice: 210.0,
+                        fullPrice: null,
+                        image: 'images/stock/20241129_140341_800x600_.jpg'
+                    },
+                    {
+                        id: '11328',
+                        name: 'Dell Inspiron 5559',
+                        storage: '120 GB SSD',
+                        processor: 'i7-6500U 2.50',
+                        optical: 'Combo',
+                        ram: '8GB',
+                        battery: 3.44,
+                        screen: '15.5"',
+                        extras: 'Built in Wifi, Bluetooth and Webcam and adapter',
+                        concessionPrice: 2.20,
+                        fullPrice: null,
+                        image: null
+                    },
+                    {
+                        id: '11300',
+                        name: 'HP Elitebook 850 G6',
+                        storage: '128 GB SSD',
+                        processor: 'i5-8265u 1.6',
+                        optical: '',
+                        ram: '8GB',
+                        battery: 4.06,
+                        screen: '15.5"',
+                        extras: 'Built in Wifi, Bluetooth and Webcam',
+                        concessionPrice: 280,
+                        fullPrice: null,
+                        image: 'images/stock/20241123_154019_800x600_.jpg'
+                    },
+                    {
+                        id: '11298',
+                        name: 'HP Probook 430 G5',
+                        storage: '256 GB NVMe',
+                        processor: 'i5-8250U 1.60',
+                        optical: '',
+                        ram: '8GB',
+                        battery: 6.3,
+                        screen: '15.5"',
+                        extras: 'Built in Wifi, Bluetooth, Webcam adapter',
+                        concessionPrice: 285,
+                        fullPrice: null,
+                        image: 'images/stock/20241123_153421_800x600_.jpg'
+                    },
+                    {
+                        id: '11308',
+                        name: 'HP Elitebook 840 G6',
+                        storage: '256 GB NVMe',
+                        processor: 'i5-8250U 1.60',
+                        optical: '',
+                        ram: '16GB',
+                        battery: 3.37 ,
+                        screen: '14.0"',
+                        extras: 'Built in Wifi, Bluetooth, Webcam adapter',
+                        concessionPrice: 300,
+                        fullPrice: null,
+                        image: 'images/stock/20241123_152808_800x600_.jpg'
+                    },
+                    {
+                        id: '11325',
+                        name: 'Lenovo IdeaPad S340',
+                        storage: '256 GB NVMe',
+                        processor: 'i5-1035G1 3.6',
+                        optical: '',
+                        ram: '8GB',
+                        battery: 5.15 ,
+                        screen: '15.5"',
+                        extras: 'Built in Wifi, Bluetooth, Webcam adapter, bag',
+                        concessionPrice: 320,
+                        fullPrice: null,
+                        image: null
+                    },
+                    {
+                        id: '11330',
+                        name: 'Lenovo Thinkpad 14s G2',
+                        storage: '256 GB NVMe',
+                        processor: 'i5-1135G7 2.40',
+                        optical: '',
+                        ram: '8GB',
+                        battery: 6.0 ,
+                        screen: '15.5"',
+                        extras: 'Built in Wifi, Bluetooth and Webcam and bag',
+                        concessionPrice: 345,
+                        fullPrice: null,
+                        image: null
+                    },
+                    {
+                        id: '11331',
+                        name: 'HP Probook 430 G7',
+                        storage: '500 GB SSD',
+                        processor: 'i5010210U 1.60',
+                        optical: '',
+                        ram: '8GB',
+                        battery: 6.1 ,
+                        screen: '13.2"',
+                        extras: 'Built in Wifi, Bluetooth and Webcam and bag',
+                        concessionPrice: 350,
+                        fullPrice: null,
+                        image: null
+                    },
 
-                    {id: '11316', name: 'HP Elitebook 850 G6', processor: 'Intel i5-8265u 1.6GHz',optical: '', storage: '128GB SSD', ram: '8GB', screen: '13.2"', concessionPrice: 150.0, image: 'images/20241129_132916_800x600_.jpg'},
-                    {id: '11329', name: 'ASUSTek VivoBook', processor: 'Pentium N6000 1.10',optical: '', storage: '256 GB NVMe', ram: '8GB', screen: '15.5"', concessionPrice: 200.0, image: ''}
+
 
 
                 ]; %>
@@ -54,7 +220,6 @@
         </div>
 
 
-
     </div>
     <p class="mt-4 text-muted">Each computer comes with Linux Mint (<%= company.name %> Edition), necessary accessories, and a 3-month warranty.</p>
     <p class="text-muted">Laptops are limited to one per person with a valid concession card.</p>
@@ -67,7 +232,7 @@
         fetch('/api/stocklist')
             .then(response => response.json())
             .then(data => {
-                const { desktops, laptops } = data;
+                const {desktops, laptops} = data;
 
                 // Populate Desktops
                 const desktopContainer = document.querySelector('#desktops');

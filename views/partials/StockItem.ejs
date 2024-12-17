@@ -16,7 +16,9 @@
                 <% } else { %>
                     <strong>Monitor:</strong> <%= item.monitor %>
                 <% } %>
+
             </p>
+            <p><%= item.extras %></p>
         </div>
         <div class="card-footer bg-white">
             <span class="text-primary">Concession Price: $<%= item.concessionPrice.toFixed(2) %></span>
