@@ -1,0 +1,23 @@
+<div class="col-md-4 mb-4 bg-gradient">
+    <div class="card h-100 shadow-sm">
+        <!-- Placeholder logic for images -->
+        <img src="<%= item.image || 'images/no-image-available.jpg' %>"
+             class="card-img-top"
+             alt="<%= item.name %>">
+
+        <div class="card-body">
+            <h5 class="card-title"><%= item.name %></h5>
+            <p class="card-text">
+                <%= item.description %>
+            </p>
+        </div>
+
+        <div class="card-footer bg-white d-flex justify-content-between">
+            <% if (item.price) { %>
+                <span class="text-secondary small">
+                    $<%= item.price.toFixed(2) %>
+                </span>
+            <% } %>
+        </div>
+    </div>
+</div>

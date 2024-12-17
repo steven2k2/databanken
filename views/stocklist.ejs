@@ -287,48 +287,6 @@
 
 <%- include('partials/footer') %>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        fetch('/api/stocklist')
-            .then(response => response.json())
-            .then(data => {
-                const {desktops, laptops} = data;
-
-                // Populate Desktops
-                const desktopContainer = document.querySelector('#desktops');
-                desktops.forEach(desktop => {
-                    const item = `
-                        <div class="list-group-item">
-                            <h5 class="mb-1">${desktop.name} <small>(ID: ${desktop.id})</small></h5>
-                            <p class="mb-1">Processor: ${desktop.processor}</p>
-                            <p class="mb-1">Storage: ${desktop.storage}, RAM: ${desktop.ram}</p>
-                            <p class="mb-1">Monitor: ${desktop.monitor}</p>
-                            <p>Concession Price: $${desktop.concessionPrice}, Full Price: $${desktop.fullPrice}</p>
-                        </div>`;
-                    desktopContainer.insertAdjacentHTML('beforeend', item);
-                });
-
-                // Populate Laptops
-                const laptopContainer = document.querySelector('#laptops');
-                laptops.forEach(laptop => {
-                    const item = `
-                        <div class="list-group-item">
-                            <h5 class="mb-1">${laptop.name} <small>(ID: ${laptop.id})</small></h5>
-                            <p class="mb-1">Processor: ${laptop.processor}</p>
-                            <p class="mb-1">Storage: ${laptop.storage}, RAM: ${laptop.ram}</p>
-                            <p class="mb-1">Screen Size: ${laptop.screen}</p>
-                            <p>Concession Price: $${laptop.concessionPrice}</p>
-                        </div>`;
-                    laptopContainer.insertAdjacentHTML('beforeend', item);
-                });
-            })
-            .catch(err => {
-                console.error('Failed to load stocklist:', err);
-            });
-    });
-</script>
-
-
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
