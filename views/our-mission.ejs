@@ -9,11 +9,30 @@
 </head>
 <body class="bg-light">
 <%- include('partials/jumbotron-light') %>
-<%- include('partials/navbar') %>
+<%- include('partials/original/navbar') %>
 
 <main class="container my-5">
     <section>
-        <h1>OUR MISSION</h1>
+        <h1 class="mb-4">OUR MISSION</h1>
+        <p>
+            At <%= company.name %>, our mission is to bridge the digital divide by providing affordable and reliable computers to individuals and community groups in need.
+            Through our efforts, we aim to empower people with access to technology and the tools they need to thrive in a digital world.
+        </p>
+        <h2 class="mt-5">What We Do</h2>
+        <ul>
+            <li>Refurbish and distribute low-cost computers to eligible individuals and groups.</li>
+            <li>Equip systems with open-source software, providing cost-effective solutions for education, work, and personal use.</li>
+            <li>Offer training and support to help users maximize their potential with the technology we provide.</li>
+        </ul>
+        <h2 class="mt-5">How We Help</h2>
+        <p>
+            By recycling and repurposing donated computers, we reduce electronic waste and provide sustainable technology solutions.
+            Every computer distributed helps someone access education, employment opportunities, and community engagement.
+        </p>
+        <h2 class="mt-5">Get Involved</h2>
+        <p>
+            <a href="<%= basePath %>volunteer">Volunteer</a> with us or <a href="<%= basePath %>donate">donate</a> your old computers to make a difference in your community.
+        </p>
     </section>
 </main>
 
