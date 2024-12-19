@@ -46,6 +46,9 @@ const pages = [
     { template: 'donate.ejs', output: 'donate.html', data: { company: config.company, activeKey: 'donate', basePath } },
     { template: 'e-bay.ejs', output: 'e-bay.html', data: { company: config.company, title: 'eBay', activeKey: 'e-bay', basePath } },
     { template: 'index.ejs', output: 'index.html', data: { company: config.company, activeKey: 'home', basePath } },
+    { template: 'our-shop.ejs', output: 'our-shop.html', data: { company: config.company, activeKey: 'shop', basePath } },
+    { template: 'our-computers.ejs', output: 'our-computers.html', data: { company: config.company, activeKey: 'our-computers', basePath } },
+
     { template: 'stocklist.ejs', output: 'stocklist.html', data: { company: config.company, activeKey: 'stock-list', basePath } },
 ];
 
