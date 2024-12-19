@@ -25,37 +25,111 @@
     </p>
     <!--    </div>-->
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="/"></a>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/databanken/">Brand Name</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link " href="/databanken/">Home</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " href="/databanken/">Home</a>
           </li>
-          <li class="nav-item"><a class="nav-link " href="/databanken/apply">Get
-              a Computer</a></li>
-          <li class="nav-item"><a class="nav-link "
-              href="/databanken/donate">Donate</a></li>
-          <li class="nav-item"><a class="nav-link "
-              href="/databanken/services">Services</a></li>
-          <li class="nav-item"><a class="nav-link "
-              href="/databanken/volunteering">Volunteering</a></li>
-          <li class="nav-item"><a class="nav-link "
-              href="/databanken/about-us">About</a></li>
-          <li class="nav-item"><a class="nav-link "
-              href="/databanken/contact">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false"> Shop </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="stocklist">Stocklist</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="e-bay">eBay</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/databanken/donate">Donate</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false"> What We Do </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="our-mission">Our Mission</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="our-shop">Our Shop</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="our-computers">Our
+                  Computers</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="our-blog">Our Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false"> Get Involved </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Volunteer Information</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Volunteer Application</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Volunteer Dashboard</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/databanken/contact">Contact</a>
+          </li>
         </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search"
+            aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </nav>
   <main class="container my-5">
     <section>
-      <h1>OUR MISSION</h1>
+      <h1 class="mb-4">OUR MISSION</h1>
+      <p> At Databanken, our mission is to bridge the digital divide by
+        providing affordable and reliable computers to individuals and community
+        groups in need. Through our efforts, we aim to empower people with
+        access to technology and the tools they need to thrive in a digital
+        world. </p>
+      <h2 class="mt-5">What We Do</h2>
+      <ul>
+        <li>Refurbish and distribute low-cost computers to eligible individuals
+          and groups.</li>
+        <li>Equip systems with open-source software, providing cost-effective
+          solutions for education, work, and personal use.</li>
+        <li>Offer training and support to help users maximize their potential
+          with the technology we provide.</li>
+      </ul>
+      <h2 class="mt-5">How We Help</h2>
+      <p> By recycling and repurposing donated computers, we reduce electronic
+        waste and provide sustainable technology solutions. Every computer
+        distributed helps someone access education, employment opportunities,
+        and community engagement. </p>
+      <h2 class="mt-5">Get Involved</h2>
+      <p>
+        <a href="/databanken/volunteer">Volunteer</a> with us or <a
+          href="/databanken/donate">donate</a> your old computers to make a
+        difference in your community.
+      </p>
     </section>
   </main>
   <footer class="bg-white text-dark py-4">
