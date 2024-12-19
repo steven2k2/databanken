@@ -50,6 +50,10 @@ const pages = [
     { template: 'our-computers.ejs', output: 'our-computers.html', data: { company: config.company, activeKey: 'our-computers', basePath } },
 
     { template: 'stocklist.ejs', output: 'stocklist.html', data: { company: config.company, activeKey: 'stock-list', basePath } },
+
+
+    { template: 'simple.ejs', output: 'simple.html', data: { company: config.company, activeKey: 'simple', basePath } },
+
 ];
 
 // Beautify options
