@@ -63,7 +63,7 @@ pages.forEach((page, key) => {
 
 
         res.render(view, {
-            title: res.locals.title,
+            title: res.locals.title || 'TITLE',
             subtitle: res.locals.subtitle,
             keywords: res.locals.keywords,
             description: res.locals.description,
