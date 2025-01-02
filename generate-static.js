@@ -52,6 +52,8 @@ const pages = [
     { template: 'our-computers.ejs', output: 'our-computers.html', data: { company: config.company, activeKey: 'our-computers', basePath } },
     { template: 'our-blog.ejs', output: 'our-blog.html', data: { company: config.company, activeKey: 'our-blog', basePath } },
 
+    { template: 'services.ejs', output: 'services.html', data: { company: config.company, activeKey: 'services', basePath } },
+
     { template: 'stocklist.ejs', output: 'stocklist.html', data: { company: config.company, activeKey: 'stock-list', basePath } },
 
 
