@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Support <%= company.name %> through donations, volunteering, or partnerships to help bridge the digital divide.">
-    <title>Support Us - <%= company.name %></title>
-    <link rel="stylesheet" href="./public/css/main.css">
-    <%- include('partials/favicon-stylesheet') %>
-</head>
-<body>
-
+<%- include('partials/head') %>
 <%- include('partials/jumbotron') %>
 <%- include('partials/original/navbar') %>
 
 <!-- Main Content -->
-<div class="container my-5">
+<div class="container-fluid container-lg my-5">
+
     <div class="row">
         <!-- Left Column -->
         <div class="col-md-8 mt-3">
@@ -25,7 +15,7 @@
                 Join us in creating a future where everyone has access to the technology they need. Whether you’re looking for a computer or want to support our mission, we’re here to help.
             </p>
             <div class="d-flex gap-2">
-                <a href="/apply" class="btn btn-primary text-white">Apply for a Computer</a>
+                <a href="/apply" class="btn btn-primary text-white">Buy a Computer</a>
                 <a href="/donate" class="btn btn-outline-secondary">Donate Now</a>
             </div>
         </div>
