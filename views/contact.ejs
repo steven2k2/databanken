@@ -3,7 +3,7 @@
 <%- include('partials/navbar') %>
 
 <!-- Main Content -->
-<div class="container my-5 bg-warning-subtle">
+<div class="container my-5">
   <h1>CONTACT</h1>
   <div class="row mt-4">
     <div class="col-md-6">
@@ -11,15 +11,15 @@
       <p>
         <%= company.name %><br>
         <%= company.address.street %><br>
-        7043 <%= company.address.city %><br>
-        Norway
+        <%= company.postal_code %> <%= company.address.city %><br>
+        <%= company.address.region %>
       </p>
     </div>
     <div class="col-md-6">
       <h2>Contact Information</h2>
       <p>
-        <strong>Phone:</strong> +47 73 10 20 30<br>
-        <strong>Email:</strong> <a href="mailto:info@digitalpathsnorway.no">info@digitalpathsnorway.no</a>
+        <strong>Phone:</strong> <%= company.phone %><br>
+        <strong>Email:</strong> <a href="mailto:<%= company.email %>"><%= company.email %></a>
       </p>
     </div>
   </div>
