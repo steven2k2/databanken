@@ -58,7 +58,7 @@ const pages = [
 
 
     { template: 'simple.ejs', output: 'simple.html', data: { company: config.company, activeKey: 'simple', basePath } },
-
+    { template: 'volunteering.ejs', output: 'volunteering.html', data: { company: config.company, activeKey: 'volunteering', basePath } },
 ];
 
 // Beautify options
