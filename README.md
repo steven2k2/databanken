@@ -14,13 +14,43 @@ This project uses **EJS (Embedded JavaScript templates)** to generate static web
 
 ---
 
+## Device Mode in Chrome Developer Tools
+
+**Device Mode** allows developers to simulate various devices and test responsive designs directly in Chrome.
+
+### How to Enable Device Mode
+
+1. **Open Developer Tools**:
+    - Right-click on any webpage and select **Inspect**.
+    - Alternatively, press `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Option+I` (Mac).
+
+2. **Enable Device Mode**:
+    - Click the **Device Mode** icon (a small phone and tablet) in the top-left corner of Developer Tools to toggle it on.
+
+---
+
+### Using Device Mode
+
+1. **Select a Device**:
+  - Use the dropdown menu to choose a predefined device like "iPhone 12".
+  - Add more devices by clicking the **Edit** option in the menu.
+
+2. **Capture Screenshots**:
+  - Click the three-dot menu in Developer Tools and select **Capture Screenshot**.
+
+  
+  
+ ![Alt text](docs/mobile.jpg "screenshot")
+
 ## Installation
 
 ### Prerequisites
+
 - **Node.js** (16 or higher)
 - **npm** (Node Package Manager)
 
 ### Setup
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/steven2k2/databanken.git
@@ -37,17 +67,23 @@ This project uses **EJS (Embedded JavaScript templates)** to generate static web
 ## Usage
 
 ### Run the Development Server
+
 For previewing your EJS templates during development:
+
 ```bash
 npm run dev
 ```
+
 - Opens the site locally on `http://localhost:3000`.
 
 ### Build Static Files
+
 To generate the static files in the `dist/` directory:
+
 ```bash
 npm run build
 ```
+
 - Converts EJS templates to static HTML.
 - Copies assets from the `public/` directory to `dist/public`.
 
@@ -71,6 +107,7 @@ npm run build
 ## Deployment
 
 ### Deploy Locally
+
 1. Build the site:
    ```bash
    npm run build
@@ -79,6 +116,7 @@ npm run build
 2. Manually deploy the `dist/` directory to your hosting platform.
 
 ### Deploy to GitHub Pages
+
 This project is configured to deploy automatically to GitHub Pages upon pushing changes to the `main` branch.
 
 - **GitHub Actions Workflow**:
@@ -86,6 +124,7 @@ This project is configured to deploy automatically to GitHub Pages upon pushing 
     - Deployment URL: `https://steven2k2.github.io/databanken/`
 
 To trigger deployment:
+
 1. Push changes to the `main` branch:
    ```bash
    git add .
