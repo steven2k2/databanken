@@ -4,8 +4,15 @@ const ejs = require('ejs');
 const beautify = require('js-beautify').html; // Import js-beautify for HTML formatting
 const config = require('./config.json');
 
+
+// Determine base path
+const isLocal = process.env.NODE_ENV !== 'production';
+const basePath = isLocal ? './' : '/databanken/';
+
+console.log('********************' + basePath);
+
 // Base path for deployment
-const basePath = '/databanken/';
+//const basePath = '/databanken/';
 
 // Paths configuration
 const paths = {

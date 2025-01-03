@@ -26,7 +26,7 @@ jobs:
 
       # Step 4: Generate static files
       - name: Generate static files
-        run: npm run build  # Runs `node generate-static.js`
+        run: NODE_ENV=production npm run build
 
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
