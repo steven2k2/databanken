@@ -49,6 +49,7 @@ const pages = [
     { template: 'simple.ejs', output: 'simple.html', activeKey: 'simple', title: 'Simple' },
     { template: 'volunteering.ejs', output: 'volunteering.html', activeKey: 'volunteering', title: 'Volunteers' },
     { template: 'contact.ejs', output: 'contact.html', activeKey: 'contact', title: 'Contact' },
+    { template: 'carousel.ejs', output: 'carousel.html', activeKey: 'carousel', title: 'Carousel' },
 ];
 
 // Beautify options
