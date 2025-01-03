@@ -13,10 +13,8 @@
                 <li class="nav-item"><a class="nav-link <%= activeKey === 'volunteering' ? 'active' : '' %>" href="<%= basePath %>volunteering">Volunteering</a></li>
                 <li class="nav-item"><a class="nav-link <%= activeKey === 'about' ? 'active' : '' %>" href="<%= basePath %>about-us">About</a></li>
                 <li class="nav-item"><a class="nav-link <%= activeKey === 'contact' ? 'active' : '' %>" href="<%= basePath %>contact">Contact</a></li>
-                <li class="nav-item">
-                    <a class="btn btn-outline-dark nav-link" href="<%= basePath %>donate" role="button">Donate Now</a>
-                </li>
             </ul>
+            <button href="<%= basePath %>donate" class="btn btn-outline-secondary navbar-btn ms-3">Donate Now</button>
         </div>
     </div>
 </nav>
