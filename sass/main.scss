@@ -86,3 +86,14 @@ footer a {
 //  border-radius: 0.5rem; /* Optional: Add rounded corners */
 //  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 //}
+
+
+.gradient-primary {
+  background: rgb(255,204,128);
+  background: linear-gradient(90deg, rgba(255,204,128,1) 0%, rgba(255,152,0,1) 35%, rgba(239,108,0,1) 100%);
+}
+
+.gradient-secondary {
+  background: rgb(159, 168, 218);
+  background: linear-gradient(90deg, rgba(159, 168, 218, 1) 0%, rgba(92, 107, 192, 1) 35%, rgba(40, 53, 147, 1) 100%);
+}
