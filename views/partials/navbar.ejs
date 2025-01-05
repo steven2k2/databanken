@@ -1,20 +1,116 @@
 <nav class="navbar sticky-top bg-white navbar-expand-lg navbar-light shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="<%= basePath %>"><%= company.name %></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand text-primary" href="<%= basePath %>"><%= company.name %></a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link <%= activeKey === 'home' ? 'active' : '' %>" href="<%= basePath %>index">Home</a></li>
-                <li class="nav-item"><a class="nav-link <%= activeKey === 'apply' ? 'active' : '' %>" href="<%= basePath %>stocklist">Computers</a></li>
-                <li class="nav-item"><a class="nav-link <%= activeKey === 'donate' ? 'active' : '' %>" href="<%= basePath %>donate">Donate</a></li>
-                <li class="nav-item"><a class="nav-link <%= activeKey === 'services' ? 'active' : '' %>" href="<%= basePath %>services">Services</a></li>
-                <li class="nav-item"><a class="nav-link <%= activeKey === 'volunteering' ? 'active' : '' %>" href="<%= basePath %>volunteering">Volunteering</a></li>
-                <li class="nav-item"><a class="nav-link <%= activeKey === 'about' ? 'active' : '' %>" href="<%= basePath %>about-us">About</a></li>
-                <li class="nav-item"><a class="nav-link <%= activeKey === 'contact' ? 'active' : '' %>" href="<%= basePath %>contact">Contact</a></li>
+                <li class="nav-item">
+                    <a
+                            class="nav-link <%= activeKey === 'home' ? 'active' : '' %>"
+                            href="<%= basePath %>index"
+                    >
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                            class="nav-link <%= activeKey === 'apply' ? 'active' : '' %>"
+                            href="<%= basePath %>stocklist"
+                    >
+                        Computers
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                            class="nav-link <%= activeKey === 'donate' ? 'active' : '' %>"
+                            href="<%= basePath %>donate"
+                    >
+                        Donate
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                            class="nav-link <%= activeKey === 'services' ? 'active' : '' %>"
+                            href="<%= basePath %>services"
+                    >
+                        Services
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                            class="nav-link dropdown-toggle <%= activeKey === 'volunteering' ? 'active' : '' %>"
+                            href="#"
+                            id="volunteeringDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                    >
+                        Volunteering
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="volunteeringDropdown">
+                        <li>
+                            <a
+                                    class="dropdown-item"
+                                    href="<%= basePath %>volunteering/opportunities"
+                            >
+                                Information
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                    class="dropdown-item"
+                                    href="<%= basePath %>volunteering/stories"
+                            >
+                                Apply
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a
+                                    class="dropdown-item"
+                                    href="<%= basePath %>volunteering/faq"
+                            >
+                                Dashboard
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a
+                            class="nav-link <%= activeKey === 'about' ? 'active' : '' %>"
+                            href="<%= basePath %>about-us"
+                    >
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                            class="nav-link <%= activeKey === 'contact' ? 'active' : '' %>"
+                            href="<%= basePath %>contact"
+                    >
+                        Contact
+                    </a>
+                </li>
             </ul>
-            <a href="<%= basePath %>donate" class="btn btn-outline-secondary navbar-btn ms-3" role="button">Donate Now</a>
+            <a
+                    href="<%= basePath %>donate"
+                    class="btn btn-outline-secondary navbar-btn ms-3"
+                    role="button"
+            >
+                Donate Now
+            </a>
         </div>
     </div>
 </nav>
