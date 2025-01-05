@@ -1,26 +1,35 @@
 <%- include('partials/head') %>
 <%- include('partials/navbar') %>
 
-<!-- Main Content -->
-<div class="container my-5 main-section-min-height">
-    <!-- Donate or Recycle Section -->
-    <div class="row">
-        <div class="col-12">
-            <h1 class="text-start">Donate or Recycle</h1>
-            <p class="lead">
-                <span class="fw-bold"><%= company.name %></span> is committed to environmentally friendly recycling of e-waste. However, due to logistical reasons, we are unfortunately unable to accept all donations. Please see below for more details.
-            </p>
-            <p class="lead">Your donation helps provide affordable, refurbished computers to individuals and organisations in need, reducing eWaste and bridging the digital divide.</p>
-            <p class="lead">If you can’t donate equipment, consider making a monetary donation to help us continue our mission. Every contribution supports refurbishment costs and operations.</p>
+<div class="p-1 gradient-green text-white">
+    <div class="container my-5">
+        <div class="row text-white">
+
+            <div class="col-md-6">
+                <h1 class="display-4">Donate or Recycle</h1>
+                <p class="lead">
+                    <span class="fw-bold"><%= company.name %></span> is committed to the environmentally friendly recycling of e-waste however due to logistical reasons we are unfortunately unable to accept all donations, please see below for more details.
+                </p>
+                <p class="text-white">
+                    Your donation helps provide affordable, refurbished computers to individuals and organisations in need, reducing eWaste and bridging the digital divide.
+                </p>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <img src="images/volunteers/75368c2b-1894-4b9e-ab71-99de181f62ba.webp" class="rounded ms-auto" alt="volunteer" style="height: 300px; width: 400px">
+            </div>
         </div>
     </div>
+</div>
 
+<!-- Main Content -->
+<div class="container my-5 main-section-min-height">
     <!-- Personal Donations Section -->
     <div class="row mt-4">
         <div class="col-12">
-            <h2 class="text-start">Personal / Single Donations</h2>
+            <h2 class="text-primary text-start">Personal / Single Donations</h2>
             <p>
-                Laptop sales are increasingly popular, and demand for desktop computers is falling. <%= company.name %> is pleased to accept donations of all brands of <strong>clean</strong> (not damaged) laptops and tablets <strong>suitable for refurbishment</strong> and reuse. However, we are unable to accept:
+                Laptop sales are increasingly popular, and demand for desktop computers is falling. <%= company.name %> is pleased to accept donations of all brands of <strong>clean</strong> (not damaged) laptops and tablets <strong>suitable
+                    for refurbishment</strong> and reuse. However, we are unable to accept:
             </p>
             <ul>
                 <li>Printers or Scanners</li>
@@ -31,14 +40,16 @@
                 <li>DVD Players and other Electronic Devices</li>
             </ul>
             <p>
-                These items should be taken directly to a waste transfer station for responsible recycling. There is generally no charge for household electronic waste recycling. You can find more information on nearby recycling/eWaste centres and resources at:
+                These items should be taken directly to a waste transfer station for responsible recycling. There is generally no charge for household electronic waste recycling. You can find more information on nearby recycling/eWaste
+                centres and resources at:
             </p>
             <ul>
                 <li><a href="https://recyclingnearyou.com.au" target="_blank">Recycling Near You</a></li>
                 <li><a href="https://techcollect.com.au" target="_blank">TechCollect</a></li>
             </ul>
             <p>
-                Disposal of eWaste in landfill will be banned from July 2019 in Victoria. However, eWaste is still recyclable for no charge at designated points across Australia. For more information on this change, please visit <a href="https://www.sustainability.vic.gov.au" target="_blank">Sustainability Victoria: eWaste</a>.
+                Disposal of eWaste in landfill will be banned from July 2019 in Victoria. However, eWaste is still recyclable for no charge at designated points across Australia. For more information on this change, please visit <a
+                        href="https://www.sustainability.vic.gov.au" target="_blank">Sustainability Victoria: eWaste</a>.
             </p>
             <p>
                 <strong><span class="text-primary">*</span> Some exceptions apply:</strong> Please contact us if you believe your computer or monitor is suitable for donation or have any questions.
@@ -49,9 +60,10 @@
     <!-- Business Donations Section -->
     <div class="row mt-4">
         <div class="col-12">
-            <h2 class="text-start">Business / Bulk Donations</h2>
+            <h2 class="text-primary text-start">Business / Bulk Donations</h2>
             <p>
-                <%= company.name %> is happy to accept bulk donations of laptops, desktops, and monitors from your business or school. Depending on the quantity and distance, we can organize to retrieve these items from your location. If you are considering making a bulk donation, please contact us.
+                <%= company.name %> is happy to accept bulk donations of laptops, desktops, and monitors from your business or school. Depending on the quantity and distance, we can organize to retrieve these items from your location. If
+                you are considering making a bulk donation, please contact us.
             </p>
             <h3>Tips</h3>
             <p>
@@ -65,7 +77,8 @@
                 <li><strong>Hard Drive Size:</strong> (e.g., 250 GB)</li>
             </ul>
             <p>
-                <small><strong>Note:</strong> Depending on your operating system, this information may be found in different places. We suggest checking Google, for example, "View system specs Windows 10". Please contact us if you need help finding this information.</small>
+                <small><strong>Note:</strong> Depending on your operating system, this information may be found in different places. We suggest checking Google, for example, "View system specs Windows 10". Please contact us if you need help
+                    finding this information.</small>
             </p>
         </div>
     </div>
