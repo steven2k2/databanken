@@ -3,54 +3,65 @@
 
 <!-- Main Content -->
 <div class="container my-5">
-  <h1>Volunteering</h1>
+  <h1>Volunteering at <%= company.name %></h1>
 
   <section class="mt-4">
     <p>
-      At <%= company.name %>, we rely on the generosity and dedication of our volunteers to provide affordable technology solutions to the community. Our volunteers play a vital role in ensuring refurbished computers reach those who need them most.
+      <%= company.name %>’s volunteers range from technical experts to hobbyists and come from many cultural and linguistic backgrounds and ages.
     </p>
     <p>
-      Whether you have technical expertise or a passion for helping others, we have a range of roles to suit your skills and interests.
+      Are you interested in recycling electronic equipment, supporting welfare and community based organisations and would you like to help enable access to computing for people on low incomes?
+    </p>
+    <p>
+      We use open source software on our computers (not Windows) as we are committed to using free and open source software.
+    </p>
+  </section>
+
+  <section class="mt-4">
+    <p>
+      Volunteers must be able to commit to 1 or more shifts a fortnight and also be keen to work in a team of like-minded people in a friendly atmosphere.
+    </p>
+    <p>
+      Volunteers will need to login to our website proactively on a regular basis to add their name on a roster and to check for updates to documentation and our to-do lists via the volunteer dashboard.    </p>
+    <p>
+      All volunteers are expected to contribute to the daily housekeeping of the premises to ensure all areas are kept clean and tidy.
+    </p>
+    <p>
+      If you have experience with Linux, that will serve you well at <%= company.name %>, however this is not a prerequisite for all volunteers, as there are plenty of other ways for you to contribute!
     </p>
   </section>
 
   <section class="mt-5">
-    <h2>Roles and Responsibilities</h2>
-    <ul>
-      <li><strong>Refurbishing Computers:</strong> Assist in cleaning, testing, and upgrading donated computers to ensure they meet our quality standards.</li>
-      <li><strong>Customer Support:</strong> Help clients with queries about our services or the technology they receive.</li>
-      <li><strong>Administration:</strong> Manage records, respond to emails, and help with general office tasks.</li>
-      <li><strong>Training:</strong> Teach basic computer skills to community members or train new volunteers.</li>
-    </ul>
+    <h2 class="text-primary">Ready to apply?</h2>
+     <p>
+       You can apply right now via our website using the Volunteer Application form. Tell us about your skills and ideally include your resume. We will invite you to an information session where we can discuss volunteering. Information sessions are held regularly.
+     </p>
   </section>
 
   <section class="mt-5">
-    <h2>Why Volunteer With Us?</h2>
+    <h2 class="text-primary">Volunteer Positions Available</h2>
+    <h3>Front Desk and Customer Service</h3>
     <p>
-      Volunteering at <%= company.name %> offers an opportunity to:
+      A great way to get some IT retail experience. Volunteers who successfully complete at least 6 months solid volunteering with us may ask for a reference.
     </p>
-    <ul>
-      <li>Make a meaningful impact on the community.</li>
-      <li>Develop new skills and gain valuable experience.</li>
-      <li>Connect with like-minded individuals who share your passion for technology and social good.</li>
-    </ul>
+    <h4>Duties</h4>
+    <p>Duties include customer service, answering phones and explaining to in-store customers about our low cost Linux computers and answering any questions. Assistance with other areas as required.</p>
+
+    <h4>Volunteer Requirements</h4>
+    <p>Volunteers must be comfortable with Linux and Linux desktops, preferably using it on a regular basis. Volunteers must be willing to become familiar with the Computerbank customised distribution desktop.</p>
+
+
   </section>
 
-  <section class="mt-5">
-    <h2>How to Get Involved</h2>
-    <p>
-      If you're interested in joining our team of volunteers, we’d love to hear from you! Please complete our volunteer application form or visit us during our open hours.
-    </p>
-    <p>
-      <a href="/volunteer-application" class="btn btn-primary">Apply Now</a>
-      <a href="/contact" class="btn btn-secondary">Contact Us</a>
-    </p>
-  </section>
+
 </div>
 
 <%- include('partials/footer') %>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
