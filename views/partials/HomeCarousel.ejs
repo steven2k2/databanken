@@ -13,18 +13,10 @@
         <!-- Carousel Items -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="p-5 gradient-green text-white text-center">
-                    <h1 class="display-4">Deals</h1>
-                    <p class="lead">Affordable, Sustainable, and Accessible Technology for All</p>
-                    <a href="<%= basePath %>deals" class="btn btn-light btn-lg">Shop deals</a>
-                </div>
+                <%- include('carousel/Deals') %>
             </div>
             <div class="carousel-item">
-                <div class="p-5 gradient-primary text-white text-center">
-                    <h1 class="display-4">Computers</h1>
-                    <p class="lead">Affordable, Sustainable, and Accessible Technology for All</p>
-                    <a href="<%= basePath %>stocklist" class="btn btn-light btn-lg">Explore Now</a>
-                </div>
+                <%- include('carousel/Computers') %>
             </div>
             <div class="carousel-item">
                 <div class="p-5 gradient-secondary text-white text-center">
