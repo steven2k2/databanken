@@ -14,11 +14,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
+      # Step 2: Set up Node.js (Upgrade to 18)
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Match the Node.js version in your project
+          node-version: '18' # Updated from 16 to 18 for sharp compatibility
 
       # Step 3: Install dependencies
       - name: Install dependencies
