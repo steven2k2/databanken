@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta name="description" content="{{site.metaDescription}}">
+  <meta name="keywords" content="{{site.metaKeywords}}">
+  <meta property="og:title" content="{{site.name}}">
+  <meta property="og:description" content="{{site.metaDescription}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{site.siteUrl}}">
+  <meta property="og:image" content="{{site.ogImage}}">
+  <link rel="canonical" href="{{site.siteUrl}}">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="{{site.author}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{site.twitterHandle}}">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{{WebSite}}",
+      "name": "{{site.name}}",
+      "url": "{{site.siteUrl}}",
+      "description": "{{site.metaDescription}}",
+      "image": "{{site.ogImage}}",
+      "author": "{{site.author}}"
+    }
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{site.name}}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+{{> @partial-block }}
+</body>
+</html>

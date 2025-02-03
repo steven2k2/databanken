@@ -66,7 +66,7 @@ footer a {
 
 
 #return-to-top {
-  opacity: 0; /* Hidden by default */
+  opacity: 0.5; /* Hidden by default */
   transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
   pointer-events: none; /* Prevent clicks when hidden */
 }

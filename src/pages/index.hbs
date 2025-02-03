@@ -1,0 +1,34 @@
+{{#> layout_dynamic_seo title='Homepage' }}
+  {{> navbar}}
+
+  {{> homecarousel }}
+
+  <div class="container-fluid container-lg my-5 main-section-min-height">
+
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-8 mt-3">
+        <p>
+          {{site.name}} is dedicated to bridging the digital divide by providing affordable, refurbished computers to individuals and organisations in need.
+        </p>
+        <p>
+          Join us in creating a future where everyone has access to the technology they need. Whether you’re looking for a computer or want to support our mission, we’re here to help.
+        </p>
+        <div class="d-flex gap-2">
+          <a href="stocklist" class="btn btn-primary text-white">Buy a Computer</a>
+          <a href="donate" class="btn btn-outline-secondary">Donate Now</a>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-4  mt-3">
+        <h3>Quick Links</h3>
+        <ul class="list-group">
+          <li class="list-group-item"><a href="<%= basePath %>stocklist">Get a Refurbished Computer</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+{{> footer}}
+{{/layout_dynamic_seo}}

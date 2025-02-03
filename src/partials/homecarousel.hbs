@@ -1,0 +1,42 @@
+<div class="container-fluid p-0">
+    <div id="jumbotronCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#jumbotronCarousel"
+                    data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#jumbotronCarousel"
+                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#jumbotronCarousel"
+                    data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              {{> carousel/deals}}
+            </div>
+            <div class="carousel-item">
+              {{> carousel/computers}}
+            </div>
+            <div class="carousel-item">
+                <div class="p-5 gradient-secondary text-white text-center">
+                    <h1 class="display-4">Volunteering at <%= company.name %></h1>
+                    <p class="lead"><%= company.name %>’s volunteers range from technical experts to hobbyists and come from many cultural and linguistic backgrounds and ages.
+                    </p>
+                    <a href="#get-involved" class="btn btn-light btn-lg">Join Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#jumbotronCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#jumbotronCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>

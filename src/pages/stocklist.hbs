@@ -1,0 +1,17 @@
+{{#> layout_dynamic_seo title=page.title }}
+  {{> navbar}}
+  <div class="container my-5">
+    <h2 class="mb-4">{{page.title}}</h2>
+
+    {{#if data}}
+      <div class="row">
+        {{#each data}}
+          {{> stock-item }}  <!-- Uses stock-item.hbs for each item -->
+        {{/each}}
+      </div>
+    {{else}}
+      <p>No stock available at the moment.</p>
+    {{/if}}
+  </div>
+
+{{/layout_dynamic_seo}}

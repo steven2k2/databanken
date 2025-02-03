@@ -1,44 +1,52 @@
 {
   "name": "databanken",
   "version": "1.0.0",
-  "description": "Site mockup.",
-  "main": "app.js",
+  "description": "Demo website.",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
-    "build": "node generate-static.js",
-    "deploy": "gh-pages -d dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/steven2k2/databanken.git"
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
   },
   "keywords": [
-    "nodejs",
-    "ejs",
-    "express",
-    "mockup"
+    "webpack",
+    "handlebars",
+    "bootstrap",
+    "sass",
+    "template engine"
   ],
   "author": "Steven Thompson",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steven2k2/clay-website/issues"
+  },
+  "homepage": "https://github.com/steven2k2/clay-website#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.1",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
-    "dotenv": "^16.4.7",
-    "ejs": "^3.1.10",
-    "express": "^4.21.2",
-    "sass": "^1.81.0"
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0",
-    "js-beautify": "^1.15.1",
-    "nodemon": "^3.1.7"
-  },
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "bugs": {
-    "url": "https://github.com/steven2k2/databanken/issues"
-  },
-  "homepage": "https://github.com/steven2k2/databanken#readme"
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "ejs": "^3.1.10",
+    "ejs-loader": "^0.5.0",
+    "eslint": "^8.48.0",
+    "handlebars": "^4.7.8",
+    "handlebars-loader": "^1.7.3",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss-loader": "^8.1.1",
+    "sass": "~1.64.2",
+    "sass-loader": "^16.0.4",
+    "standard": "^17.1.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
+    "webpack-favicons": "^1.5.4"
+  }
 }

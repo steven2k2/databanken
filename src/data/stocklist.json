@@ -1,0 +1,58 @@
+[
+  {
+    "id": "11282",
+    "name": "Hewlett-Packard HP2210",
+    "storage": "500 GB HDD",
+    "processor": "i7-26003.8",
+    "optical": "DVD-ROM",
+    "ram": "4GB",
+    "battery": null,
+    "screen": "23.8\"",
+    "extras": null,
+    "concessionPrice": 95.0,
+    "fullPrice": 142.50,
+    "image": "assets/images/stock/20241025_124948_450x600_.jpg"
+  },
+  {
+    "id": "11202",
+    "name": "HP Prodesk 600 G1 SFF",
+    "storage": "240 GB SSD",
+    "processor": "i5-4590 3.30 Ghz",
+    "optical": "Combo",
+    "ram": "8GB",
+    "battery": null,
+    "screen": "19\"",
+    "extras": "Extra 1 TB hard disk",
+    "concessionPrice": 110.0,
+    "fullPrice": 165.0,
+    "image": "assets/images/stock/20240817_124330_450x600_1.jpg"
+  },
+  {
+    "id": "11288",
+    "name": "Lenovo M700",
+    "storage": "256 GB SSD",
+    "processor": "i5-6400 2.70 GHz",
+    "optical": "Combo",
+    "ram": "8GB",
+    "battery": null,
+    "screen": "19\"",
+    "extras": "Extra 1 TB hard disk",
+    "concessionPrice": 125.0,
+    "fullPrice": 187.50,
+    "image": "assets/images/stock/20241123_155119_450x600_1.jpg"
+  },
+  {
+    "id": "11327",
+    "name": "Lenovo M700",
+    "storage": "256 GB SSD",
+    "processor": "i5-6400 3.30 GHz",
+    "optical": "DVD-RW",
+    "ram": "8GB",
+    "battery": null,
+    "screen": "24\"",
+    "extras": "Wifi, 2 GB video card, widescreen",
+    "concessionPrice": 190.0,
+    "fullPrice": 285.0,
+    "image": "assets/images/stock/20241207_120020_450x600_.jpg"
+  }
+]

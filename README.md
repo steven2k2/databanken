@@ -164,3 +164,7 @@ This project is licensed under the ISC License. See the [LICENSE](https://openso
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
 - [EJS Documentation](https://ejs.co/)
 - [Bootstrap Documentation](https://getbootstrap.com/)
+
+---
+
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
