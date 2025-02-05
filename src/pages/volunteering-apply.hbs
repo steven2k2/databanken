@@ -1,0 +1,91 @@
+{{#> layout_dynamic_seo title=page.title }}
+  {{> navbar}}
+  {{#> hero title='<span class="fw-bold text-primary">Volunteering</span> Apply'}}
+    <p class="lead">Are you interested in recycling electronic equipment, supporting welfare and community-based organisations, and would you like to help enable access to computing for people on low incomes?</p>
+  {{/hero}}
+  <section class="container py-5">
+    <form>
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name (Required)</label>
+        <input type="text" class="form-control" id="fullName" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email (Required)</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Your Phone (Required)</label>
+        <input type="tel" class="form-control" id="phone" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="experience" class="form-label">Previous Work or Volunteer Experience</label>
+        <textarea class="form-control" id="experience" rows="3"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="skills" class="form-label">Relevant Linux Training, Qualifications, Skills & Experience (Required)</label>
+        <textarea class="form-control" id="skills" rows="3" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="organisations" class="form-label">Other Organisations Where You Have Volunteered</label>
+        <textarea class="form-control" id="organisations" rows="2"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="languages" class="form-label">Language(s) Spoken</label>
+        <input type="text" class="form-control" id="languages">
+      </div>
+
+      <div class="mb-3">
+        <label for="employer" class="form-label">Current Employer</label>
+        <input type="text" class="form-control" id="employer">
+      </div>
+
+      <div class="mb-3">
+        <label for="references" class="form-label">References (See Above)</label>
+        <textarea class="form-control" id="references" rows="3" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="area" class="form-label">Preferred Volunteer Area (Required)</label>
+        <select class="form-select" id="area" required>
+          <option value="Front Desk">Front Desk</option>
+          <option value="Build Room">Build Room</option>
+          <option value="User Support">User Support</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="time" class="form-label">Preferred Volunteer Time(s) (Required)</label>
+        <input type="text" class="form-control" id="time" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="reason" class="form-label">Reason for Volunteering (Required)</label>
+        <textarea class="form-control" id="reason" rows="3" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="hearAbout" class="form-label">How Did You Hear About Us?</label>
+        <input type="text" class="form-control" id="hearAbout">
+      </div>
+
+      <div class="mb-3">
+        <label for="comments" class="form-label">Other Comments</label>
+        <textarea class="form-control" id="comments" rows="3"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="resume" class="form-label">Resume (Optional)</label>
+        <input type="file" class="form-control" id="resume">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit Application</button>
+    </form>
+  </section>
+  {{> footer-v2 }}
+{{/layout_dynamic_seo}}

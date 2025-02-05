@@ -1,9 +1,11 @@
 {{#> layout_dynamic_seo title=page.title }}
   {{> navbar}}
-
+  {{#> hero title='<span class="fw-bold text-primary">About</span> us'}}
+    <p class="lead">{{site.name}} is an independent not-for-profit organisation based in {{site.address.addressLocality}}.</p>
+  {{/hero}}
   <section class="container py-5">
     <h2 class="text-center mb-4">About Us</h2>
-    <p class="lead text-center">{{site.name}} is an independent not-for-profit organisation based in {{site.address.addressLocality}}. Since {{formatDate site.foundingDate "YYYY"}}, we have been recycling and refurbishing computers to provide low-cost solutions for Australian Concession Card holders and other eligible customers.</p>
+    <p class="lead text-center">{{site.name}} is an independent <span class='fw-bold'>not-for-profit organisation</span> based in {{site.address.addressLocality}}. Since {{formatDate site.foundingDate "YYYY"}}, we have been recycling and refurbishing computers to provide low-cost solutions for Australian Concession Card holders and other eligible customers.</p>
 
     <!-- What We Do -->
     <div class="card mb-4">
