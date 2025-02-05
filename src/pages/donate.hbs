@@ -1,6 +1,6 @@
 {{#> layout_dynamic_seo title=page.title }}
   {{> navbar}}
-  {{#> hero title='<span class="fw-semibold">Donate</span> <span class="text-dark">or Recycle</span>'}}
+  {{#> hero title='<span class="fw-bold text-primary">Donate</span> or Recycle'}}
     <p class="lead"><span class="fw-semibold">{{site.name}}</span> is committed to the environmentally friendly recycling of e-waste. However, due to logistical reasons, we are unfortunately unable to accept all donations. Please see below
       for more details.</p>
   {{/hero}}
@@ -25,14 +25,14 @@
       <li><a href="#">TechCollect</a></li>
     </ul>
 
-    <p>Disposal of eWaste in landfill will be banned from July 2019 in Victoria; however, eWaste is still able to be recycled for no charge at designated points across Australia. For more information on this change please see <a
-        href="https://www.sustainability.vic.gov.au/You-and-Your-Home/Waste-and-recycling/Household-waste/eWaste" target="_blank" rel="noopener noreferrer">Sustainability Victoria: eWaste</a></p>
+    <p>Disposal of <span class="fw-semibold">eWaste in landfill will be banned from July 2019</span> in {{site.address.addressRegion}}; however, eWaste is still able to be recycled for no charge at designated points across {{site.address.addressCountry}}. For more information on this change please see <a
+        href="https://www.sustainability.vic.gov.au/You-and-Your-Home/Waste-and-recycling/Household-waste/eWaste" target="_blank" rel="noopener noreferrer">Sustainability {{site.address.addressRegion}}: eWaste</a></p>
 
     <p><sup>*</sup>Some exceptions do apply, please contact us if you believe your computer or monitor is suitable for donation or you have any questions (see tips below).</p>
 
     <!-- Business / Bulk Donations -->
     <h2 class="mt-5 mb-3 fw-bold">Business / Bulk Donations</h2>
-    <p>Computerbank is happy to accept bulk donations of laptops, desktops and monitors from your business or school.
+    <p>{{site.name}} is happy to accept bulk donations of laptops, desktops and monitors from your business or school.
     <p>Depending on the quantity and distance we can organise to retrieve these items from your location, If you are considering making a bulk donation, please contact us</p>
 
     <!-- Image Carousel -->
