@@ -1,0 +1,41 @@
+{{#> layout_dynamic_seo title=page.title }}
+  {{> navbar}}
+  <div class="container my-5">
+    <h2 class="mb-4">{{page.title}}</h2>
+
+    <div class="container my-5">
+      <h2 class="mb-4">{{page.title}}</h2>
+
+      {{#if data}}
+        <div class="row">
+          {{#each data}}
+            {{> item }}  <!-- Using the item.hbs partial -->
+          {{/each}}
+        </div>
+      {{else}}
+        <p>No items available at the moment.</p>
+      {{/if}}
+    </div>
+
+
+<!--    {{#if data}}-->
+<!--      <div class="row">-->
+<!--        {{#each data}}-->
+<!--          <div class="col-md-4 mb-3">-->
+<!--            <div class="card">-->
+<!--              <img src="assets/images/ebay/{{this.image}}" class="card-img-top" alt="{{this.title}}">-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">{{this.title}}</h5>-->
+<!--                <p class="card-text">{{this.description}}</p>-->
+<!--                <p class="fw-bold">${{this.price}}</p>-->
+<!--                <a href="{{this.link}}" class="btn btn-primary" target="_blank">View on eBay</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        {{/each}}-->
+<!--      </div>-->
+<!--    {{else}}-->
+<!--      <p>No items available at the moment.</p>-->
+<!--    {{/if}}-->
+  </div>
+{{/layout_dynamic_seo}}

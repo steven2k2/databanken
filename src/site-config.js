@@ -2,39 +2,51 @@ const packageJSON = require('../package.json');
 
 const getVersion = (pkg) => pkg ? pkg.replace(/^\^/, '') : 'Unknown';
 
-console.dir(packageJSON);
-
 module.exports = {
   name: "Databanken",
-  siteUrl: "https://www.keramikkverkstedet.no",
-  tagline: "Skap med hender, form med hjertet.",
-  author: "Oskar Nilsen",
-  established: new Date('2023-03-01').getFullYear(),
-  copyrightYear: new Date().getFullYear(),
-  lastUpdated: new Date().toISOString().substring(0, 10),
+  url: "https://databanken.example.com/",
+  slogan: "A self-funded nonprofit dedicated to bridging the digital divide.",
+  author: {
+    "@type": "Organization",
+    "name": "Databankin AS",
+    "url": "https://databankin.no/"
+  },
+  foundingDate: "2002-01-01",
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      "email": "support@databankin.no",
+      "telephone": "+47 800 55 678",
+      "contactType": "customer support"
+    }
+  ],
+  address: {
+    "@type": "PostalAddress",
+    "streetAddress": "Wessels gate 181",
+    "addressLocality": "Trondheim",
+    "addressRegion": "Trondelag",
+    "postalCode": "7043",
+    "addressCountry": "Norway"
+  },
+  description: "A self-funded nonprofit dedicated to bridging the digital divide.",
+  image: "/assets/images/databanken-preview.jpg",
+  charityRegistration: "https://www.acnc.gov.au/charity/charities/e54c1e89-3aaf-e811-a962-000d3ad24a0d/profile",
+  sameAs: [
+    "https://twitter.com/databanken",
+    "https://www.linkedin.com/company/databanken"
+  ],
+  logo: "/assets/images/recycling.png",
+  theme: "dark",
 
-  infoAddress: "info@digitalpathsnorway.no",
-  supportEmail: "support@keramikkverkstedet.no",
-  phoneNumber: "+47 55 12 34 56",
-  businessAddress: "Wessels gate 181, 7043 Trondheim, Norge",
-
-  metaDescription: "Keramikkverkstedet er et fellesskap for keramiske kunstnere.",
-  metaKeywords: ["leire", "keramikk", "håndverk", "skulptur"],
-  twitterHandle: "@keramikkverkstedet",
-  ogImage: "/assets/images/social-preview.jpg",
-
-  logo: "/assets/logo.png",
-  favicon: "/assets/favicon.ico",
-
-  theme: "light",
-  showNewsletterSignup: true,
-
-  enableBetaFeatures: false,
-  maintenanceMode: false,
+  deal: {
+    title: "Back to school",
+    text: "Be school ready with a Windows 11 laptop",
+  },
 
   bootstrap: {
     version: getVersion(packageJSON.dependencies?.bootstrap || '')
   },
+
 
   pages: [
     { name: "404", title: "Page Not Found", description: "Oops! The page you're looking for doesn't exist.", slug: "404.html", ogImage: "/assets/images/404-preview.jpg", schemaType: "WebPage" },
@@ -48,6 +60,11 @@ module.exports = {
       slug: "donate.html",
       ogImage: "/assets/images/donate-preview.jpg",
       schemaType: "WebPage"
-    }
+    },
+    { name: "site-info", title: "Site info", description: "", slug: "site-info.html", ogImage: "", schemaType: "" },
+    { name: "about-us", title: "about-us", description: "", slug: "about-us.html", ogImage: "", schemaType: "" },
+
+    { name: "home", title: "home", description: "", slug: "home.html", ogImage: "", schemaType: "" },
+
   ]
 };

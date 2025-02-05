@@ -1,6 +1,6 @@
 <div class="col-md-4 mb-4">
   <div class="card h-100 shadow-sm">
-    <img src="{{image}}" class="card-img-top" alt="{{name}}">
+    <img src="{{#if image}}{{image}}{{else}}assets/images/computer.png{{/if}}" class="card-img-top" alt="{{name}}">
 
     <div class="card-body">
       <h5 class="card-title">{{name}}</h5>
@@ -9,24 +9,24 @@
         {{#if processor}}<span class="fw-medium">Processor - </span> {{processor}}<br>{{/if}}
         {{#if storage}}<span class="fw-medium">Storage - </span> {{storage}}<br>{{/if}}
         {{#if ram}}<span class="fw-medium">RAM - </span> {{ram}}<br>{{/if}}
-        {{#if screen}}<span class="fw-medium">Screen:</span> {{screen}}<br>{{/if}}
+        {{#if screen}}<span class="fw-medium">Screen - </span> {{screen}}<br>{{/if}}
       </p>
 
       {{#if extras}}
-        <p class="text-muted"><span class="fw-medium">Extras:</strong> {{extras}}</p>
+        <p class="text-muted"><span class="fw-medium">Extras:</span> {{extras}}</p>
       {{/if}}
     </div>
 
     <div class="card-footer bg-white d-flex justify-content-between">
       {{#if concessionPrice}}
         <span class="text-secondary small">
-          <span class="fw-medium">Concession Price:</strong> ${{concessionPrice}}
+          <span class="fw-medium">Concession Price:</span> ${{concessionPrice}}
         </span>
       {{/if}}
 
       {{#if fullPrice}}
         <span class="text-secondary small">
-          <span class="fw-medium">Full Price:</strong> ${{fullPrice}}
+          <span class="fw-medium">Full Price:</span> ${{fullPrice}}
         </span>
       {{/if}}
     </div>

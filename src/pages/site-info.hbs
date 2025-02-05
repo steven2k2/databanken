@@ -1,0 +1,212 @@
+{{#> layout title='Homepage' }}
+  <div class="container mt-4">
+    <h2>Site Information</h2>
+    <table class="table table-striped">
+      <tbody>
+      <tr>
+        <th>Name</th>
+        <td>{{site.name}}</td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td><a href="{{site.url}}" target="_blank">{{site.url}}</a></td>
+      </tr>
+      <tr>
+        <th>Slogan</th>
+        <td>{{site.slogan}}</td>
+      </tr>
+      <tr>
+        <th>Author</th>
+        <td><a href="{{site.author.url}}" target="_blank">{{site.author.name}}</a></td>
+      </tr>
+      <tr>
+        <th>Founding Date</th>
+        <td>{{site.foundingDate}}</td>
+      </tr>
+      <tr>
+        <th>Contact Email</th>
+        <td><a href="mailto:{{site.contactPoint.[0].email}}">{{site.contactPoint.[0].email}}</a></td>
+      </tr>
+      <tr>
+        <th>Contact Phone</th>
+        <td>{{site.contactPoint.[0].telephone}}</td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td>
+          {{site.address.streetAddress}},<br>
+          {{site.address.addressLocality}}, {{site.address.addressRegion}} {{site.address.postalCode}},<br>
+          {{site.address.addressCountry}}
+        </td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>{{site.description}}</td>
+      </tr>
+      <tr>
+        <th>Logo</th>
+        <td><img src="{{site.logo}}" alt="Logo" width="100"></td>
+      </tr>
+      <tr>
+        <th>Theme</th>
+        <td>{{site.theme}}</td>
+      </tr>
+      <tr>
+        <th>Bootstrap Version</th>
+        <td>{{site.bootstrap.version}}</td>
+      </tr>
+      <tr>
+        <th>Social Links</th>
+        <td>
+          {{#each site.sameAs}}
+            <a href="{{this}}" target="_blank">{{this}}</a><br>
+          {{/each}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <section class="container my-4">
+    <h2 class="mb-3">Custom Bootstrap Theme Colors</h2>
+    <div class="row g-3">
+      <!-- Primary -->
+      <div class="col-md-4">
+        <div class="p-3 text-white text-center rounded bg-primary">
+          bg-primary
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded bg-primary-subtle">
+          bg-primary-subtle
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-primary text-center rounded border border-primary">
+          text-primary
+        </div>
+      </div>
+
+      <!-- Secondary -->
+      <div class="col-md-4">
+        <div class="p-3 text-white text-center rounded bg-secondary">
+          bg-secondary
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded bg-secondary-subtle">
+          bg-secondary-subtle
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-secondary text-center rounded border border-secondary">
+          text-secondary
+        </div>
+      </div>
+
+      <!-- Success -->
+      <div class="col-md-4">
+        <div class="p-3 text-white text-center rounded bg-success">
+          bg-success
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded bg-success-subtle">
+          bg-success-subtle
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-success text-center rounded border border-success">
+          text-success
+        </div>
+      </div>
+
+      <!-- Danger -->
+      <div class="col-md-4">
+        <div class="p-3 text-white text-center rounded bg-danger">
+          bg-danger
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded bg-danger-subtle">
+          bg-danger-subtle
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-danger text-center rounded border border-danger">
+          text-danger
+        </div>
+      </div>
+
+      <!-- Warning -->
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded bg-warning">
+          bg-warning
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded bg-warning-subtle">
+          bg-warning-subtle
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-warning text-center rounded border border-warning">
+          text-warning
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded bg-info">
+          bg-info
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded bg-info-subtle">
+          bg-info-subtle
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-info text-center rounded border border-info">
+          text-info
+        </div>
+      </div>
+
+      <!-- Light -->
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded bg-light">
+          bg-light
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded bg-light-subtle">
+          bg-light-subtle
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-light text-center rounded border border-light">
+          text-light
+        </div>
+      </div>
+
+      <!-- Dark -->
+      <div class="col-md-4">
+        <div class="p-3 text-white text-center rounded bg-dark">
+          bg-dark
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-white text-center rounded bg-dark-subtle">
+          bg-dark-subtle
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 text-dark text-center rounded border border-dark">
+          text-dark
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{/layout}}

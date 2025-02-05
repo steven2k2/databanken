@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackFavicons = require('webpack-favicons');
 const siteConfig = require("./src/site-config");
+const moment = require('moment');
+
 
 // Function to check if a JSON file exists and read it
 const loadPageData = (pageName) => {
@@ -12,9 +14,9 @@ const loadPageData = (pageName) => {
 
   try {
     if (fs.existsSync(filePath)) {
-      console.log(`✅ Data file found: ${filePath}`);
+      // console.log(`✅ Data file found: ${filePath}`);
       const jsonData = require(filePath);
-      console.log(`📦 Loaded data for '${pageName}':`, jsonData);
+      // console.log(`📦 Loaded data for '${pageName}':`, jsonData);
       return jsonData;
     } else {
       console.warn(`⚠️ No data file found for '${pageName}'. Expected location: ${filePath}`);
@@ -62,7 +64,7 @@ module.exports = {
 
   devServer: {
     static: path.resolve(__dirname, 'dist'),
-    port: 8085,
+    port: 8095,
     open: true,
     hot: true,
     historyApiFallback: {
@@ -76,6 +78,10 @@ module.exports = {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
         options: {
+          helperDirs: path.join(__dirname, './src/modules/helpers'),
+          precompileOptions: {
+            knownHelpersOnly: false,
+          },
           partialDirs: path.resolve(__dirname, 'src/partials'),
         },
       },
@@ -95,7 +101,7 @@ module.exports = {
 
   plugins: [
     new WebpackFavicons({
-      src: 'src/assets/images/lotus-flower.png',
+      src: 'src/assets/images/recycle.png',
       appName: 'Databanken',
       appleStatusBarStyle: 'default',
       path: 'assets/images',

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 
 /* SCSS HEX */
 $golden-gate-bridge: #EF540Eff;
@@ -24,14 +25,19 @@ $primary-bg-subtle:       hot-pink; //tint-color($primary, 80%) !default;
 
 // 451 Style anchor elements.
 
-$link-color:  $golden-gate-bridge; //                            hotpink;
+
+$link-color:                              $primary;
+$link-decoration:                         none;
+$link-shade-percentage:                   20% !default;
+//$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+//$link-hover-decoration:                   null !default;
 
 
 //606
-$font-family-sans-serif:   "Open Sans", serif; //   "Andada Pro", serif;
+$font-family-sans-serif:   "Manrope", serif; //   "Andada Pro", serif;
 
 //654
-$headings-font-family:  "Lexend Giga", serif;
+//$headings-font-family:  "Lexend Giga", serif;
 
 // Import All of Bootstrap's CSS
 @import "bootstrap";
@@ -52,4 +58,8 @@ $headings-font-family:  "Lexend Giga", serif;
 .gradient-green {
   background: rgb(27,94,32);
   background: linear-gradient(90deg, rgba(27,94,32,1) 0%, rgba(46,125,50,1) 35%, rgba(76,175,80,1) 100%);
+}
+
+sup {
+  color: $primary !important;
 }

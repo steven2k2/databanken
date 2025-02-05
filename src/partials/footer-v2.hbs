@@ -1,0 +1,36 @@
+<footer class="bg-light text-dark py-4">
+  <div class="container">
+    <div class="row">
+      <!-- About Section -->
+      <div class="col-md-4">
+        <h5>ABOUT</h5>
+        <ul class="list-unstyled">
+          <li><a href="/site-info" class="text-dark">Site Info</a></li>
+          <li><a href="/about" class="text-dark">About Us</a></li>
+          <li><a href="/contact" class="text-dark">Contact Us</a></li>
+          <li><a href="/privacy-policy" class="text-dark">Privacy Policy</a></li>
+          <li><a href="/terms" class="text-dark">Terms and Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="col-md-5">
+        <h5>CONTACT</h5>
+        <p><strong>Email:</strong> <a href="mailto:{{site.contactPoint.[0].email}}" class="text-dark">{{site.contactPoint.[0].email}}</a></p>
+        <p><strong>Call:</strong> <a href="tel:{{site.contactPoint.[0].telephone}}" class="text-dark">{{site.contactPoint.[0].telephone}}</a></p>
+        <p><strong>Address:</strong> {{site.address.streetAddress}}, {{site.address.addressLocality}}, {{site.address.addressRegion}}, {{site.address.postalCode}}, {{site.address.addressCountry}}</p>
+      </div>
+
+      <!-- Social & Copyright Section -->
+      <div class="col-md-3 text-md-end text-center mt-3 mt-md-0">
+        <p class="mb-0">&copy; {{site.foundingDate}} {{site.name}}</p>
+        <p class="mb-0">"{{site.slogan}}"</p>
+        <div class="mt-2">
+          {{#each site.sameAs}}
+            <a href="{{this}}" class="me-2 text-dark" target="_blank">{{this}}</a>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

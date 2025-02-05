@@ -1,0 +1,66 @@
+{{#> layout_dynamic_seo title=page.title }}
+  {{> navbar}}
+
+  <section class="container py-5">
+    <h2 class="text-center mb-4">About Us</h2>
+    <p class="lead text-center">{{site.name}} is an independent not-for-profit organisation based in {{site.address.addressLocality}}. Since {{formatDate site.foundingDate "YYYY"}}, we have been recycling and refurbishing computers to provide low-cost solutions for Australian Concession Card holders and other eligible customers.</p>
+
+    <!-- What We Do -->
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">What Do We Do?</h4>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li>Refurbished Desktops and Laptops</li>
+          <li>Donated computers are tested and refurbished</li>
+          <li>Installation of a customised Linux operating system</li>
+          <li>Independent, volunteer-run not-for-profit organisation</li>
+          <li>Computers offered to disadvantaged individuals and community groups</li>
+          <li>Over 10,000 computers distributed to individuals, families, and groups</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Long Term Savings -->
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h4 class="mb-0">Long Term Savings</h4>
+      </div>
+      <div class="card-body">
+        <p>One of our customers has been with us for 12 years, spending just $250 on three refurbished computers. By choosing refurbished computers, our customers save thousands of dollars.</p>
+        <p>Using Linux helps lower computing costs by eliminating recurring software fees and antivirus costs.</p>
+        <p>Refurbished computers also help the environment by extending the lifespan of technology.</p>
+      </div>
+    </div>
+
+    <!-- Donations and Recycling -->
+    <div class="card mb-4">
+      <div class="card-header bg-warning text-dark">
+        <h4 class="mb-0">Donations and Recycling</h4>
+      </div>
+      <div class="card-body">
+        <p>{{site.name}} receives donated computers, laptops, and tablets from businesses, educational institutions, not-for-profits, and individuals. These devices are refurbished with quality free software and offered to those in need.</p>
+        <h5>We Recycle Responsibly</h5>
+        <p>Obsolete or broken computer parts do not end up in landfill. Instead, metals are sent to Melbourne-based scrap recyclers or sold via our <a href="#">eBay page</a>. We do not send obsolete equipment to unsafe dismantling plants in third-world countries.</p>
+      </div>
+    </div>
+
+    <!-- More Information -->
+    <div class="card mb-4">
+      <div class="card-header bg-info text-white">
+        <h4 class="mb-0">More Information</h4>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><a href="#">Organisations We Have Helped</a></li>
+          <li><a href="#">Our Supporters</a></li>
+          <li><a href="#">{{site.name}} Committee</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+{{/layout_dynamic_seo}}

@@ -3,6 +3,9 @@
   <div class="container my-5">
     <h2 class="mb-4">{{page.title}}</h2>
 
+    <h3 class="mb-4">Desktops</h3>
+    <p>The listed concession price is only available to concession card holders. Please have a valid concession card ready when you make your purchase, you may purchase a desktop computer without a concession card however you will be charged our full market price.</p>
+
     {{#if data}}
       <div class="row">
         {{#each data}}
@@ -13,5 +16,7 @@
       <p>No stock available at the moment.</p>
     {{/if}}
   </div>
+
+  {{> footer-v2 }}
 
 {{/layout_dynamic_seo}}

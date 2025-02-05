@@ -1,0 +1,125 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<div class="p-1 gradient-green text-white">
+    <div class="container my-5">
+        <div class="row text-white">
+
+            <div class="col-md-6">
+                <h1 class="display-4">Donate or Recycle</h1>
+                <p class="lead">
+                    <span class="fw-bold"><%= company.name %></span> is committed to the environmentally friendly recycling of e-waste however due to logistical reasons we are unfortunately unable to accept all donations, please see below for more details.
+                </p>
+                <p class="text-white">
+                    Your donation helps provide affordable, refurbished computers to individuals and organisations in need, reducing eWaste and bridging the digital divide.
+                </p>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <img src="images/volunteers/volunteer-1.webp" class="rounded ms-auto" alt="volunteer" style="height: 300px; width: 400px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container my-5 main-section-min-height">
+    <!-- Personal Donations Section -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2 class="text-primary text-start">Personal / Single Donations</h2>
+            <p>
+                Laptop sales are increasingly popular, and demand for desktop computers is falling. <%= company.name %> is pleased to accept donations of all brands of <strong>clean</strong> (not damaged) laptops and tablets <strong>suitable
+                    for refurbishment</strong> and reuse. However, we are unable to accept:
+            </p>
+            <ul>
+                <li>Printers or Scanners</li>
+                <li>Desktop Computers <span class="text-primary">*</span></li>
+                <li>Monitors / Screens <span class="text-primary">*</span></li>
+                <li>Digital Media</li>
+                <li>Miscellaneous Cables</li>
+                <li>DVD Players and other Electronic Devices</li>
+            </ul>
+            <p>
+                These items should be taken directly to a waste transfer station for responsible recycling. There is generally no charge for household electronic waste recycling. You can find more information on nearby recycling/eWaste
+                centres and resources at:
+            </p>
+            <ul>
+                <li><a href="https://recyclingnearyou.com.au" target="_blank">Recycling Near You</a></li>
+                <li><a href="https://techcollect.com.au" target="_blank">TechCollect</a></li>
+            </ul>
+            <p>
+                Disposal of eWaste in landfill will be banned from July 2019 in Victoria. However, eWaste is still recyclable for no charge at designated points across Australia. For more information on this change, please visit <a
+                        href="https://www.sustainability.vic.gov.au" target="_blank">Sustainability Victoria: eWaste</a>.
+            </p>
+            <p>
+                <strong><span class="text-primary">*</span> Some exceptions apply:</strong> Please contact us if you believe your computer or monitor is suitable for donation or have any questions.
+            </p>
+        </div>
+    </div>
+
+    <!-- Business Donations Section -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2 class="text-primary text-start">Business / Bulk Donations</h2>
+            <p>
+                <%= company.name %> is happy to accept bulk donations of laptops, desktops, and monitors from your business or school. Depending on the quantity and distance, we can organize to retrieve these items from your location. If
+                you are considering making a bulk donation, please contact us.
+            </p>
+            <h3>Tips</h3>
+            <p>
+                If you are contacting us about a potential donation, it would be greatly appreciated if you could include the following information to help us assess if your computer can be given a second life:
+            </p>
+            <ul>
+                <li><strong>Original Operating System:</strong> (e.g., Windows XP, Windows 7)</li>
+                <li><strong>Computer Age:</strong> (e.g., 4 Years)</li>
+                <li><strong>CPU:</strong> (e.g., Core i3 2.8 GHz or AMD FX-4300 3.2 GHz)</li>
+                <li><strong>RAM:</strong> (e.g., 8 GB)</li>
+                <li><strong>Hard Drive Size:</strong> (e.g., 250 GB)</li>
+            </ul>
+            <p>
+                <small><strong>Note:</strong> Depending on your operating system, this information may be found in different places. We suggest checking Google, for example, "View system specs Windows 10". Please contact us if you need help
+                    finding this information.</small>
+            </p>
+        </div>
+    </div>
+
+    <p>Before donating, please ensure your data is backed up and the device is wiped clean. For guidance on securely erasing your data, check online resources or contact us for assistance.</p>
+
+    <!-- Image Carousel -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div id="donationCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/monitors.jpg" class="d-block w-100" alt="Monitors">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/desktops-monitors.jpg" class="d-block w-100" alt="Desktops & monitors">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/recycling-1.jpg" class="d-block w-100" alt="Motherboards">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/recycling-2.jpg" class="d-block w-100" alt="Power supplies">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/recycling-3.jpg" class="d-block w-100" alt="Computer fans">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#donationCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#donationCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
+
+</body>
+</html>
