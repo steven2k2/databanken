@@ -1,32 +1,31 @@
-const fs = require('fs');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackFavicons = require('webpack-favicons');
-const siteConfig = require("./src/site-config");
-const moment = require('moment');
-
+const fs = require('fs')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const WebpackFavicons = require('webpack-favicons')
+const siteConfig = require('./src/site-config')
+const moment = require('moment')
 
 // Function to check if a JSON file exists and read it
 const loadPageData = (pageName) => {
-  const filePath = path.resolve(__dirname, `./src/data/${pageName}.json`);
+  const filePath = path.resolve(__dirname, `./src/data/${pageName}.json`)
 
   try {
     if (fs.existsSync(filePath)) {
       // console.log(`✅ Data file found: ${filePath}`);
-      const jsonData = require(filePath);
+      const jsonData = require(filePath)
       // console.log(`📦 Loaded data for '${pageName}':`, jsonData);
-      return jsonData;
+      return jsonData
     } else {
-      console.warn(`⚠️ No data file found for '${pageName}'. Expected location: ${filePath}`);
-      return null;
+      console.warn(`⚠️ No data file found for '${pageName}'. Expected location: ${filePath}`)
+      return null
     }
   } catch (error) {
-    console.error(`❌ Error loading data file for '${pageName}':`, error);
-    return null;
+    console.error(`❌ Error loading data file for '${pageName}':`, error)
+    return null
   }
-};
+}
 
 // Generate HTML files dynamically
 const htmlPlugins = siteConfig.pages.map(({ name, title, description, slug, ogImage }) =>
@@ -39,7 +38,7 @@ const htmlPlugins = siteConfig.pages.map(({ name, title, description, slug, ogIm
       data: loadPageData(name) // Dynamically loads JSON if available
     }
   })
-);
+)
 
 module.exports = {
   mode: 'development',
@@ -57,6 +56,7 @@ module.exports = {
   output: {
     filename: 'assets/js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: './',
     clean: true,
   },
 
@@ -101,12 +101,13 @@ module.exports = {
 
   plugins: [
     new WebpackFavicons({
-      src: 'src/assets/images/recycle.png',
+      src: 'src/assets/images/logo.png',
       appName: 'Databanken',
       appleStatusBarStyle: 'default',
-      path: 'assets/images',
-      background: '#000',
-      theme_color: '#000',
+      // path: 'assets/images',
+      path: 'images',
+      background: '#FF5722',
+      theme_color: '#FF5722',
       icons: { android: true, appleIcon: true, appleStartup: true, favicons: true },
     }),
 
@@ -120,4 +121,4 @@ module.exports = {
       patterns: [{ from: 'src/assets/images', to: 'assets/images' }],
     }),
   ],
-};
+}

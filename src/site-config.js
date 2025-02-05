@@ -65,6 +65,7 @@ module.exports = {
     { name: "about-us", title: "about-us", description: "", slug: "about-us.html", ogImage: "", schemaType: "" },
 
     { name: "home", title: "home", description: "", slug: "home.html", ogImage: "", schemaType: "" },
+    { name: "volunteering", title: "volunteering", description: "", slug: "volunteering.html", ogImage: "", schemaType: "" },
 
   ]
 };
