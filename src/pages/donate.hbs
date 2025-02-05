@@ -1,13 +1,12 @@
 {{#> layout_dynamic_seo title=page.title }}
   {{> navbar}}
-  <section class="container py-5">
-    <h1 class="mb-4 fw-bold">Donate or Recycle</h1>
+  {{#> hero title='<span class="fw-semibold">Donate</span> <span class="text-dark">or Recycle</span>'}}
     <p class="lead"><span class="fw-semibold">{{site.name}}</span> is committed to the environmentally friendly recycling of e-waste. However, due to logistical reasons, we are unfortunately unable to accept all donations. Please see below
       for more details.</p>
-
+  {{/hero}}
+  <section class="container py-5">
     <!-- Personal / Single Donations -->
-
-    <h2 class="mt-5 mb-3 fw-bold">Personal / Single Donations</h2>
+    <h2 class="mt-2 mb-3 fw-bold">Personal / Single Donations</h2>
 
     <p>We accept <span class="fw-medium">clean</span> (not damaged) laptops and tablets <span class="fw-bold">suitable for refurbishment</span> and reuse. However, we cannot accept:</p>
     <ul class="list-group list-group-flush">
