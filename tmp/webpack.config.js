@@ -1,4 +1,14 @@
-import packageJSON from '../package.json' assert { type: 'json' };
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+// Workaround for missing __dirname in ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Manually read package.json
+const packageJsonPath = path.resolve(__dirname, '../package.json');
+const packageJSON = JSON.parse(readFileSync(packageJsonPath, 'utf-8'));
 
 const getVersion = (pkg) => pkg ? pkg.replace(/^\^/, '') : 'Unknown';
 

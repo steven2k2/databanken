@@ -1,0 +1,44 @@
+[
+  {
+    "id": "11282",
+    "name": "Master ATX 450WT 450W Switching Power Supply 80 plus",
+    "description": "This computer power supply is in good condition and has been tested.",
+    "price": 20.0,
+    "image": "images/ebay/master-atx-450w.webp"
+  },
+  {
+    "id": "11282",
+    "name": "HP Elite X2 1012 G2 Tablet, 8GB RAM, 256 GB SSD, 12\", 7th gen i5",
+    "description": "This tablet is in good condition and it is fully working. The touch screen is also in good condition but from certain angles you may be able to see some light marks from the keyboard. They are not visible when using the screen normally.",
+    "price": 125.0,
+    "image": "images/ebay/hp-elite-x2.webp"
+  },
+  {
+    "id": "226500326792",
+    "name": "MD PRIME B450M-K AM4 mATX motherboard, LED lighting",
+    "description": "Opened never used: An item in excellent, new condition with no wear.",
+    "price": 99.0,
+    "image": "images/ebay/md-prime-b4450m.webp"
+  },
+  {
+    "id": "226500326792",
+    "name": "Fujitsu Dyna MO M2513S2F SCSI 640MB MO External Magneto Optical Drive - untested",
+    "description": "This computer power supply is in good condition and has been tested.",
+    "price": 35.0,
+    "image": "images/ebay/fujitsu-dyna-mo.webp"
+  },
+  {
+    "id": "226500326792",
+    "name": "Asus Taichi 21 Dual screen Ultraportable, Intel i7, 256 GB SSD Eng/Chin Keyboard",
+    "description": "This unique dual screen convertible tablet/Ultrabook is in good condition and it is fully working, apart from the battery which does not hold charge.",
+    "price": 150.0,
+    "image": "images/ebay/asus-tachchi.webp"
+  },
+  {
+    "id": "226500326792",
+    "name": "Dell Thunderbolt TB16 (K16A) USB Docking Station + 130W Dell power supply",
+    "description": "This docking station is in good condition and is fully working. A Dell 130W power supply is included.",
+    "price": 29.0,
+    "image": "images/ebay/dell-thunderbolt-tb16.webp"
+  }
+]

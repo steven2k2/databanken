@@ -1,0 +1,62 @@
+<nav class="navbar sticky-top bg-white navbar-expand-lg navbar-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="images/logo.png" alt="{{siteMetadata.name}} logo" height="50">
+        {{siteMetadata.name}}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="computersDropdown"
+                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Computers </a>
+                    <ul class="dropdown-menu" aria-labelledby="computersDropdown">
+                        <li>
+                            <a class="dropdown-item" href="stocklist.html">Our shop</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="ebay.html"> eBay </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="donate.html"> Donate </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#"
+                       id="volunteeringDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false"> Volunteering </a>
+                    <ul class="dropdown-menu" aria-labelledby="volunteeringDropdown">
+                        <li>
+                            <a class="dropdown-item" href="volunteering.html">Information</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="volunteering-apply.html">Apply</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="volunteering/faq"> Dashboard </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="about-us"> About </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="contact"> Contact </a>
+                </li>
+            </ul>
+            <a href="donate" class="btn btn-outline-secondary navbar-btn ms-3"
+               role="button"> Donate Now </a>
+        </div>
+    </div>
+</nav>

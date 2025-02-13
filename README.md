@@ -32,15 +32,15 @@ This project uses **EJS (Embedded JavaScript templates)** to generate static web
 ### Using Device Mode
 
 1. **Select a Device**:
-  - Use the dropdown menu to choose a predefined device like "iPhone 12".
-  - Add more devices by clicking the **Edit** option in the menu.
+- Use the dropdown menu to choose a predefined device like "iPhone 12".
+- Add more devices by clicking the **Edit** option in the menu.
 
 2. **Capture Screenshots**:
-  - Click the three-dot menu in Developer Tools and select **Capture Screenshot**.
+- Click the three-dot menu in Developer Tools and select **Capture Screenshot**.
 
-  
-  
- ![Alt text](docs/mobile.jpg "screenshot")
+
+
+![Alt text](docs/mobile.jpg "screenshot")
 
 ## Installation
 
@@ -140,7 +140,7 @@ To trigger deployment:
     - Update the `basePath` in `generate-static.js` if the site location changes.
 
 - **Dependencies**:
-    - **EJS**: For rendering templates.
+    - **Handlebars**: For rendering templates.
     - **Bootstrap**: For responsive styling.
     - **Font Awesome**: For icons.
     - **gh-pages**: For automated GitHub Pages deployment.
@@ -162,7 +162,7 @@ This project is licensed under the ISC License. See the [LICENSE](https://openso
 ### Additional Resources
 
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
-- [EJS Documentation](https://ejs.co/)
+- [Handlebars Documentation](https://handlebarsjs.com/)
 - [Bootstrap Documentation](https://getbootstrap.com/)
 
 ---

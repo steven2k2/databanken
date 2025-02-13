@@ -1,124 +1,88 @@
-const fs = require('fs')
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const WebpackFavicons = require('webpack-favicons')
-const siteConfig = require('./src/site-config')
-const moment = require('moment')
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import sitePages from './src/config/site-pages.js';
+import siteInfo from './src/config/site-info.js';
 
-// Function to check if a JSON file exists and read it
-const loadPageData = (pageName) => {
-  const filePath = path.resolve(__dirname, `./src/data/${pageName}.json`)
+// Fix __dirname for ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-  try {
-    if (fs.existsSync(filePath)) {
-      // console.log(`✅ Data file found: ${filePath}`);
-      const jsonData = require(filePath)
-      // console.log(`📦 Loaded data for '${pageName}':`, jsonData);
-      return jsonData
-    } else {
-      console.warn(`⚠️ No data file found for '${pageName}'. Expected location: ${filePath}`)
-      return null
-    }
-  } catch (error) {
-    console.error(`❌ Error loading data file for '${pageName}':`, error)
-    return null
+// Load stock data manually
+const stockDataPath = path.resolve(__dirname, 'src/data/stock-data.json');
+const stockData = JSON.parse(fs.readFileSync(stockDataPath, 'utf8'));
+
+const ebayDataPath = path.resolve(__dirname, 'src/data/ebay-data.json');
+const ebayData = JSON.parse(fs.readFileSync(ebayDataPath, 'utf8'));
+
+// Generate multiple HTML pages, adding stock data only for stocklist
+const htmlPlugins = sitePages.map(({ name, title, slug, description }) => {
+  let extraData = {};
+
+  if (name === "stocklist") {
+    extraData.stock = stockData; // Only add stock data for stocklist.html
   }
-}
+  if (name === "ebay") {
+    extraData.data = ebayData; // Only add stock data for stocklist.html
+  }
 
-// Generate HTML files dynamically
-const htmlPlugins = siteConfig.pages.map(({ name, title, description, slug, ogImage }) =>
-  new HtmlWebpackPlugin({
-    template: `./src/pages/${name}.hbs`,
+  return new HtmlWebpackPlugin({
+    template: `./src/templates/pages/${name}.hbs`,
     filename: slug,
-    templateParameters: {
-      site: siteConfig,
-      page: { title, description, slug, ogImage },
-      data: loadPageData(name) // Dynamically loads JSON if available
-    }
-  })
-)
+    templateParameters: { title, description, ...siteInfo, ...extraData }
+  });
+});
 
-module.exports = {
-  mode: 'development',
-
-  resolve: {
-    alias: {
-      Assets: path.resolve(__dirname, 'src/assets'),
-    },
-  },
-
+export default {
+  mode: process.env.NODE_ENV || 'development',
   entry: {
     main: './src/scripts/main.js',
   },
-
   output: {
-    filename: 'assets/js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: './',
-    clean: true,
+    filename: '[name].[contenthash].bundle.js',
+    assetModuleFilename: 'assets/images/[name].[hash][ext]',
+    clean: true
   },
-
   devtool: 'source-map',
-
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
-    port: 8095,
+    static: './dist',
     open: true,
-    hot: true,
-    historyApiFallback: {
-      rewrites: [{ from: /^\/404/, to: '/404.html' }],
-    },
+    liveReload: true // Ensures auto-reload when files change
   },
-
+  optimization: {
+    splitChunks: { chunks: 'all' }
+  },
   module: {
     rules: [
       {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
-        options: {
-          helperDirs: path.join(__dirname, './src/modules/helpers'),
-          precompileOptions: {
-            knownHelpersOnly: false,
-          },
-          partialDirs: path.resolve(__dirname, 'src/partials'),
-        },
+        options: { partialDirs: path.resolve(__dirname, 'src/templates/partials') }
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|webp)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: 'asset/resource',
-        generator: {
-          filename: 'assets/images/[name][ext]',
-        },
-      },
-    ],
+        exclude: path.resolve(__dirname, 'src/images')
+      }
+    ]
   },
-
   plugins: [
-    new WebpackFavicons({
-      src: 'src/assets/images/logo.png',
-      appName: 'Databanken',
-      appleStatusBarStyle: 'default',
-      // path: 'assets/images',
-      path: 'images',
-      background: '#FF5722',
-      theme_color: '#FF5722',
-      icons: { android: true, appleIcon: true, appleStartup: true, favicons: true },
-    }),
-
-    ...htmlPlugins,
-
-    new MiniCssExtractPlugin({
-      filename: 'assets/css/styles.[contenthash].css',
-    }),
-
-    new CopyWebpackPlugin({
-      patterns: [{ from: 'src/assets/images', to: 'assets/images' }],
-    }),
-  ],
-}
+    new CopyWebpackPlugin({ patterns: [{ from: 'src/images', to: 'images' }] }),
+    ...htmlPlugins, // Dynamically inject HTML pages
+    new MiniCssExtractPlugin({ filename: 'assets/css/[name].[contenthash].css' })
+  ]
+};

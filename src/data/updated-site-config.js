@@ -1,17 +1,17 @@
-import packageJSON from '../package.json' assert { type: 'json' };
+const packageJSON = require('../package.json');
 
 const getVersion = (pkg) => pkg ? pkg.replace(/^\^/, '') : 'Unknown';
 
-const siteConfig = {
+module.exports = {
   name: "Databanken",
   url: "https://databanken.example.com/",
-  slogan: "A self-funded nonprofit dedicated to bridging the digital divide.",
+  slogan: "Powering Your Data",
   author: {
     "@type": "Organization",
     "name": "Databankin AS",
     "url": "https://databankin.no/"
   },
-  foundingDate: "2002-01-01",
+  foundingDate: "2025-02-01",
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -24,28 +24,23 @@ const siteConfig = {
     "@type": "PostalAddress",
     "streetAddress": "Wessels gate 181",
     "addressLocality": "Trondheim",
-    "addressRegion": "Trondelag",
+    "addressRegion": "Trøndelag",
     "postalCode": "7043",
     "addressCountry": "Norway"
   },
-  description: "A self-funded nonprofit dedicated to bridging the digital divide.",
+  description: "Databanken provides secure and efficient cloud storage solutions, data analytics, and enterprise database management.",
   image: "/assets/images/databanken-preview.jpg",
-  charityRegistration: "https://www.acnc.gov.au/charity/charities/e54c1e89-3aaf-e811-a962-000d3ad24a0d/profile",
   sameAs: [
     "https://twitter.com/databanken",
     "https://www.linkedin.com/company/databanken"
   ],
-  logo: "/assets/images/recycling.png",
+  logo: "/assets/logo.png",
   theme: "dark",
-
-  deal: {
-    title: "Back to school",
-    text: "Be school ready with a Windows 11 laptop",
-  },
 
   bootstrap: {
     version: getVersion(packageJSON.dependencies?.bootstrap || '')
   },
+
 
   pages: [
     { name: "404", title: "Page Not Found", description: "Oops! The page you're looking for doesn't exist.", slug: "404.html", ogImage: "/assets/images/404-preview.jpg", schemaType: "WebPage" },
@@ -59,13 +54,6 @@ const siteConfig = {
       slug: "donate.html",
       ogImage: "/assets/images/donate-preview.jpg",
       schemaType: "WebPage"
-    },
-    { name: "site-info", title: "Site info", description: "", slug: "site-info.html", ogImage: "", schemaType: "" },
-    { name: "about-us", title: "about-us", description: "", slug: "about-us.html", ogImage: "", schemaType: "" },
-    { name: "home", title: "home", description: "", slug: "home.html", ogImage: "", schemaType: "" },
-    { name: "volunteering", title: "volunteering", description: "", slug: "volunteering.html", ogImage: "", schemaType: "" },
-    { name: "volunteering-apply", title: "volunteering-apply", description: "", slug: "volunteering-apply.html", ogImage: "", schemaType: "" },
+    }
   ]
 };
-
-export default siteConfig;

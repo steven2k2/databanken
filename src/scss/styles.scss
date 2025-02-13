@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+/* SCSS HEX */
+$golden-gate-bridge: #EF540Eff;
+$forest-green: #1C8D20ff;
+$platinum: #E7E1DEff;
+$navy-blue: #0F0074ff;
+$tekhelet: #42327Dff;
+
+// Override Bootstrap Theme Colors
+$primary: $golden-gate-bridge; // Body
+$secondary: $navy-blue;
+
+
+//606
+$font-family-sans-serif:   "Manrope", serif; //   "Andada Pro", serif;
+
+// Import Bootstrap Core
+@import "bootstrap/scss/bootstrap";
+
+.gradient-primary {
+  background: rgb(255,204,128);
+  background: linear-gradient(90deg, rgba(255,204,128,1) 0%, rgba(255,152,0,1) 35%, rgba(239,108,0,1) 100%);
+}
+
+.gradient-secondary {
+  background: rgb(159, 168, 218);
+  background: linear-gradient(90deg, rgba(159, 168, 218, 1) 0%, rgba(92, 107, 192, 1) 35%, rgba(40, 53, 147, 1) 100%);
+}
+
+.gradient-green {
+  background: rgb(27,94,32);
+  background: linear-gradient(90deg, rgba(27,94,32,1) 0%, rgba(46,125,50,1) 35%, rgba(76,175,80,1) 100%);
+}
+
+sup {
+  color: $primary !important;
+}

@@ -1,0 +1,26 @@
+{{#> layout_dynamic_seo title=page.title }}
+  {{> navbar}}
+
+  {{#> hero title='<span class="fw-bold text-primary">Shop</span> in-store'}}
+    <p class="lead">
+      Low-cost computers are available to concession cardholders, students, and community groups.
+    </p>
+  {{/hero}}
+
+  <div class="container my-5">
+    <h2 class="mb-4">{{page.title}}</h2>
+
+    {{#if stock.length}}
+      <div class="row">
+        {{#each stock}}
+          {{> stock-item}}
+        {{/each}}
+      </div>
+    {{else}}
+      <p class="text-muted">No stock available at the moment.</p>
+    {{/if}}
+
+  </div>
+
+  {{> footer}}
+{{/layout_dynamic_seo}}
