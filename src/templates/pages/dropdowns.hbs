@@ -1,0 +1,86 @@
+{{#> layouts/simple }}
+  {{> navbar }}
+
+  <section class="container py-5">
+    <h1 class="mb-4">Bootstrap Dropdowns</h1>
+    <p class="lead">Demonstrating Bootstrap dropdown menus.</p>
+
+    <hr class="my-5">
+
+    <!-- Basic Dropdown -->
+    <h2 class="fw-bold">Basic Dropdown</h2>
+    <div class="dropdown mb-4">
+      <button class="btn btn-primary dropdown-toggle" type="button" id="basicDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="basicDropdown">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Dropdown with Divider and Header -->
+    <h2 class="fw-bold">Dropdown with Divider & Header</h2>
+    <div class="dropdown mb-4">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="advancedDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        Advanced Dropdown
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="advancedDropdown">
+        <li><h6 class="dropdown-header">Dropdown Header</h6></li>
+        <li><a class="dropdown-item" href="#">First item</a></li>
+        <li><a class="dropdown-item" href="#">Second item</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated item</a></li>
+      </ul>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Dropup -->
+    <h2 class="fw-bold">Dropup</h2>
+    <div class="dropup mb-4">
+      <button class="btn btn-warning dropdown-toggle" type="button" id="dropupButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropup button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropupButton">
+        <li><a class="dropdown-item" href="#">Dropup Item 1</a></li>
+        <li><a class="dropdown-item" href="#">Dropup Item 2</a></li>
+      </ul>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Dropright -->
+    <h2 class="fw-bold">Dropright</h2>
+    <div class="dropright mb-4">
+      <button class="btn btn-info dropdown-toggle" type="button" id="droprightButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropright button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="droprightButton">
+        <li><a class="dropdown-item" href="#">Right Item 1</a></li>
+        <li><a class="dropdown-item" href="#">Right Item 2</a></li>
+      </ul>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Dropleft -->
+    <h2 class="fw-bold">Dropleft</h2>
+    <div class="dropleft mb-4">
+      <button class="btn btn-danger dropdown-toggle" type="button" id="dropleftButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropleft button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropleftButton">
+        <li><a class="dropdown-item" href="#">Left Item 1</a></li>
+        <li><a class="dropdown-item" href="#">Left Item 2</a></li>
+      </ul>
+    </div>
+
+  </section>
+
+  {{> flat-footer }}
+
+{{/layouts/simple}}

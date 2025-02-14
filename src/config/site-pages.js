@@ -9,4 +9,5 @@ export default [
   { name: "about-us", title: "About us", slug: "about-us.html", description: "" },
   { name: "our-shop", title: "Our shop", slug: "our-shop.html", description: "" },
   { name: "volunteering", title: "volunteering", slug: "volunteering.html", description: "" },
+  { name: "dropdowns", title: "dropdowns", slug: "dropdowns.html", description: "" },
 ];
