@@ -1,5 +1,6 @@
 <div class="container-fluid p-0">
   <div id="jumbotronCarousel" class="carousel slide" data-bs-ride="carousel">
+
     <!-- Indicators -->
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#jumbotronCarousel"
@@ -10,25 +11,48 @@
       <button type="button" data-bs-target="#jumbotronCarousel"
               data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+
     <!-- Carousel Items -->
     <div class="carousel-inner fixed-carousel">
+
+      <!-- Featured Deals Slide -->
       <div class="carousel-item active">
-        {{> carousel/deals}}
+        <div class="p-5 gradient-primary text-white text-center h-100 d-flex flex-column justify-content-center">
+          <h1 class="display-4">Exclusive Deals</h1>
+          <p class="lead">
+            Discover our latest refurbished computers at unbeatable prices.
+            High-quality, affordable, and ready for you!
+          </p>
+          <a href="#shop" class="btn btn-light btn-lg">Browse Deals</a>
+        </div>
       </div>
+
+      <!-- Available Computers Slide -->
       <div class="carousel-item">
-        {{> carousel/computers}}
+        <div class="p-5 gradient-green text-white text-center h-100 d-flex flex-column justify-content-center">
+          <h1 class="display-4">Our Computers</h1>
+          <p class="lead">
+            We provide affordable, refurbished desktops and laptops
+            with Linux and open-source software pre-installed.
+          </p>
+          <a href="#computers" class="btn btn-light btn-lg">View Inventory</a>
+        </div>
       </div>
+
+      <!-- Volunteering Slide -->
       <div class="carousel-item">
         <div class="p-5 gradient-secondary text-white text-center h-100 d-flex flex-column justify-content-center">
-          <h1 class="display-4">Volunteering at {{site.name}}</h1>
+          <h1 class="display-4">Volunteering at {{companyDetails.name}}</h1>
           <p class="lead">
-            {{site.name}}’s volunteers range from technical experts to hobbyists
-            and come from many cultural and linguistic backgrounds and ages.
+            Join our diverse community of volunteers, from technical experts to enthusiasts,
+            and help us bridge the digital divide.
           </p>
           <a href="#get-involved" class="btn btn-light btn-lg">Join Us</a>
         </div>
       </div>
+
     </div>
+
     <!-- Controls -->
     <button class="carousel-control-prev" type="button"
             data-bs-target="#jumbotronCarousel" data-bs-slide="prev">
@@ -40,5 +64,6 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+
   </div>
 </div>
