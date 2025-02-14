@@ -3,32 +3,38 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Replace with your default branch name if it's not `main`
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js (Upgrade to 18)
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Updated from 16 to 18 for sharp compatibility
+          node-version: 18
 
-      # Step 3: Install dependencies
+      - name: Cache Node Modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
-        run: npm install
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install --legacy-peer-deps
 
-      # Step 4: Generate static files
-      - name: Generate static files
-        run: NODE_ENV=production npm run build
+      - name: Build Project
+        run: |
+          NODE_ENV=production npm run build
 
-      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
