@@ -83,8 +83,8 @@ export default {
   },
 
   footerLinks: [
-    {text: 'Terms & Conditions', url: "/terms-and-conditions"},
-    { text: "Privacy Policy", url: "/privacy-policy" },
+    {text: 'Terms & Conditions', url: "/terms-and-conditions.html"},
+    { text: "Privacy Policy", url: "/privacy-policy.html" },
     // { text: "About Us", url: "/about-us" },
     // { text: "Blog", url: "/blog" },
     // { text: "Contact", url: "/contact" },
