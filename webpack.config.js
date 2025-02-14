@@ -26,7 +26,7 @@ const htmlPlugins = sitePages.map(({ name, title, slug, description }) => {
     extraData.stock = stockData; // Only add stock data for stocklist.html
   }
   if (name === "ebay") {
-    extraData.data = ebayData; // Only add stock data for stocklist.html
+    extraData.data = ebayData; //
   }
 
   return new HtmlWebpackPlugin({
@@ -61,7 +61,13 @@ export default {
       {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
-        options: { partialDirs: path.resolve(__dirname, 'src/templates/partials') }
+        options: {
+          helperDirs: path.resolve(__dirname, 'src/helpers'), // Register custom helpers
+          precompileOptions: {
+            knownHelpersOnly: false,
+          },
+          partialDirs: path.resolve(__dirname, 'src/templates/partials')
+        }
       },
       {
         test: /\.scss$/,

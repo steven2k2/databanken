@@ -1,4 +1,4 @@
-<div class="col-md-4 mb-4">
+<div class="col-md-3 mb-4">
   <div class="card h-100 shadow-sm">
     <img src="{{#if image}}{{image}}{{else}}images/computer.png{{/if}}" class="card-img-top" alt="{{name}}">
 
@@ -11,8 +11,10 @@
         {{#if ram}}<span class="fw-medium">RAM:</span> {{ram}}<br>{{/if}}
         <span class="fw-bold">Condition:</span> {{condition}}
       </p>
-
-      <p class="text-primary fw-bold fs-5">{{price}}</p>
+    </div>
+    <div class="card-footer text-body-secondary">
+      <span class="text-primary fw-bold fs-5">$ {{fullPrice}}</span>
     </div>
   </div>
+
 </div>

@@ -42,12 +42,13 @@ export default {
   },
 
   companyDetails: {
-    registeredName: "Databanken",
-    registrationNumber: "123456789",
-    vatNumber: "VAT-987654321",
+    name: "Databanken",
+    registeredName: "Databanken Norge Forening",
+    registrationNumber: "984 321 567",
+    vatNumber: "NO 984 321 567 MVA",
     establishedYear: 2020,
-    privacyPolicyUrl: "https://databanken.example.com/privacy-policy",
-    termsOfServiceUrl: "https://databanken.example.com/terms-of-service"
+    privacyPolicyUrl: "https://databanken-norge.no/personvern",
+    termsOfServiceUrl: "https://databanken-norge.no/vilkar"
   },
 
   seoSettings: {
@@ -82,12 +83,14 @@ export default {
   },
 
   footerLinks: [
-    { text: "About Us", url: "/about-us" },
-    { text: "Blog", url: "/blog" },
-    { text: "Contact", url: "/contact" },
-    { text: "Volunteer", url: "/volunteer" }, // Added
-    { text: "Donate", url: "/donate" }, // Added
+    {text: 'Terms & Conditions', url: "/terms-and-conditions"},
     { text: "Privacy Policy", url: "/privacy-policy" },
-    { text: "Terms of Service", url: "/terms-of-service" }
+    // { text: "About Us", url: "/about-us" },
+    // { text: "Blog", url: "/blog" },
+    // { text: "Contact", url: "/contact" },
+    // { text: "Volunteer", url: "/volunteer" }, // Added
+    // { text: "Donate", url: "/donate" }, // Added
+
+    // { text: "Terms of Service", url: "/terms-of-service" }
   ]
 };

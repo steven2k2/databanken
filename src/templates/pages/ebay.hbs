@@ -1,12 +1,39 @@
-{{#> layout_dynamic_seo title=page.title }}
+{{#> layouts/simple }}
+
   {{> navbar}}
 
   {{#> hero title='Our <span class="fw-bold text-primary">eBay</span> store'}}
-    <p class="lead">Computerbank sells equipment on eBay that is not useful for low-income or community groups.</p>
+    <p class="lead mb-4">
+      <span class="fw-semibold">{{siteMetadata.name}}</span> sells equipment on eBay that is not useful for low-income or community groups.
+      These items may be bulky, faulty, vintage, enterprise equipment, one of a kind, or end-of-life equipment.
+      Laptops listed have issues or have marks and scratches. Excess stock is also sold.
+    </p>
   {{/hero}}
 
-  <div class="container my-5">
-    <h2 class="mb-4">{{page.title}}</h2>
+  <section class="container py-5">
+
+    <!-- Our eBay Store Section -->
+    <h2 class="mt-5 mb-3 fw-bold">Our eBay Store</h2>
+
+    <p class="mb-3">
+      <span class="fw-semibold">{{siteMetadata.name}}</span> sells equipment on eBay that is not useful for low-income or community groups.
+      These items may be bulky, faulty, vintage, enterprise equipment, one of a kind, or end-of-life equipment.
+      Laptops listed have issues or have marks and scratches. Excess stock is also sold.
+    </p>
+
+    <p class="mb-3">
+      We are a not-for-profit organisation. All funds raised by sales go back towards our operating costs.
+    </p>
+
+    <p class="mb-4">
+      We are self-funded and receive no financial support from business or government.
+      By selling these items, we stop them from going into landfill.
+    </p>
+
+    <hr class="my-5">
+
+    <!-- eBay Listings Section -->
+    <h2 class="mt-5 mb-3 fw-bold">Our eBay Listings</h2>
 
     {{#if data.length}}
       <div class="row">
@@ -18,7 +45,6 @@
       <p class="text-muted">No eBay items available at the moment.</p>
     {{/if}}
 
-  </div>
+  </section>
 
-  {{> footer}}
-{{/layout_dynamic_seo}}
+{{/layouts/simple}}

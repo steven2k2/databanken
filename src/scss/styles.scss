@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 
 
 /* SCSS HEX */
@@ -37,3 +38,93 @@ $font-family-sans-serif:   "Manrope", serif; //   "Andada Pro", serif;
 sup {
   color: $primary !important;
 }
+
+
+/* Set a fixed height for the carousel */
+.fixed-carousel {
+  height: 400px; /* Adjust this as needed */
+}
+
+.fixed-carousel .carousel-item {
+  height: 100%;
+}
+
+/* Ensure images fill the container */
+.fixed-carousel .carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Center text-based slides properly */
+.fixed-carousel .carousel-item > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@keyframes jiggle {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-2px, -2px); }
+  40%  { transform: translate(2px, 2px); }
+  60%  { transform: translate(-2px, 2px); }
+  80%  { transform: translate(2px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+.jiggle:hover {
+  display: inline-block;
+  animation: jiggle 0.3s ease-in-out infinite;
+}
+
+//.footer {
+//  background: #f5f2e6; /* Light beige background */
+//  padding: 15px 0;
+//  font-size: 14px;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//}
+//
+//.container {
+//  display: flex;
+//  justify-content: space-between;
+//  align-items: center;
+//  width: 90%;
+//  max-width: 1200px;
+//}
+//
+//.footer-left {
+//  display: flex;
+//  align-items: center;
+//  gap: 15px;
+//}
+//
+//.brand {
+//  font-weight: bold;
+//  color: #ff6600;
+//}
+//
+//.social-icons a {
+//  color: #ff6600;
+//  font-size: 18px;
+//  margin: 0 5px;
+//  text-decoration: none;
+//}
+//
+//.footer-right {
+//  display: flex;
+//  align-items: center;
+//  gap: 15px;
+//}
+//
+//.footer-right a {
+//  color: #333;
+//  text-decoration: none;
+//}
+//
+//.footer-right span {
+//  color: #333;
+//}
