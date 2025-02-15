@@ -53,6 +53,7 @@
     "bootstrap": "^5.3.3",
     "dotenv": "^16.0.3",
     "fast-glob": "^3.3.3",
-    "mini-css-extract-plugin": "^2.9.2"
+    "mini-css-extract-plugin": "^2.9.2",
+    "webpack-favicons": "^1.5.4"
   }
 }

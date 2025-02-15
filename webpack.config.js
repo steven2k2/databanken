@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import WebpackFavicons  from 'webpack-favicons';
 import sitePages from './src/config/site-pages.js';
 import siteInfo from './src/config/site-info.js';
 
@@ -87,6 +88,15 @@ export default {
     ]
   },
   plugins: [
+    new WebpackFavicons({
+      src: 'src/images/recycle.png',
+      appName: 'Databanken',
+      appleStatusBarStyle: 'default',
+      path: 'assets/images',
+      background: '#fff',
+      theme_color: '#fff',
+      icons: { android: true, appleIcon: true, appleStartup: true, favicons: true },
+    }),
     new CopyWebpackPlugin({ patterns: [{ from: 'src/images', to: 'images' }] }),
     ...htmlPlugins, // Dynamically inject HTML pages
     new MiniCssExtractPlugin({ filename: 'assets/css/[name].[contenthash].css' })
