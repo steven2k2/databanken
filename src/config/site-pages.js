@@ -9,5 +9,9 @@ export default [
   { name: "volunteering", title: "Volunteering", slug: "volunteering.html", description: "Join our team of volunteers and help make a difference." },
   { name: "dropdowns", title: "Dropdowns", slug: "dropdowns.html", description: "Demonstration of Bootstrap dropdown menus." },
   { name: "terms-and-conditions", title: "Terms and Conditions", slug: "terms-and-conditions.html", description: "Read our terms and conditions for using this site." },
-  { name: "privacy-policy", title: "privacy-policy", slug: "privacy-policy.html", description: "Read our privacy policy." }
+  { name: "privacy-policy", title: "privacy-policy", slug: "privacy-policy.html", description: "Read our privacy policy." },
+  { name: "shop-desktops", title: "shop-desktops", slug: "shop-desktops.html", description: "Shop desktops." },
+  { name: "shop-laptops", title: "shop-laptops", slug: "shop-laptops.html", description: "Tech for Less! Affordable Laptops at Great Prices" }
+
+// shop-desktops.hbs
 ];

@@ -20,6 +20,10 @@ $font-family-sans-serif:   "Manrope", serif; //   "Andada Pro", serif;
 // Import Bootstrap Core
 @import "bootstrap/scss/bootstrap";
 
+a {
+  text-decoration: none;
+}
+
 .gradient-primary {
   background: rgb(255,204,128);
   background: linear-gradient(90deg, rgba(255,204,128,1) 0%, rgba(255,152,0,1) 35%, rgba(239,108,0,1) 100%);

@@ -6,14 +6,17 @@
       <h5 class="card-title">{{name}}</h5>
 
       <p class="card-text">
-        {{#if processor}}<span class="fw-medium">Processor:</span> {{processor}}<br>{{/if}}
-        {{#if storage}}<span class="fw-medium">Storage:</span> {{storage}}<br>{{/if}}
-        {{#if ram}}<span class="fw-medium">RAM:</span> {{ram}}<br>{{/if}}
-        <span class="fw-bold">Condition:</span> {{condition}}
+        <span class="fw-medium>">{{formatSpecs processor ram storage os}}</span><br>
+
+        {{#if extras}}
+
+          <hr>
+          <span class="fw-medium">{{extras}}<br>
+        {{/if}}
       </p>
     </div>
     <div class="card-footer text-body-secondary">
-      <span class="text-primary fw-bold fs-5">$ {{fullPrice}}</span>
+      <span class="text-primary fw-bold fs-5">$ {{concessionPrice}}</span>
     </div>
   </div>
 

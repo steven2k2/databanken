@@ -8,6 +8,15 @@ import WebpackFavicons  from 'webpack-favicons';
 import sitePages from './src/config/site-pages.js';
 import siteInfo from './src/config/site-info.js';
 
+const options = {
+  day: 'numeric',
+  month: 'short',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: true,
+};
+const lastModified = new Date().toLocaleDateString('en-GB', options).replace(',', ''); // Removes unnecessary comma; // "16 Feb 2025"
+
 // Fix __dirname for ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,12 +28,21 @@ const stockData = JSON.parse(fs.readFileSync(stockDataPath, 'utf8'));
 const ebayDataPath = path.resolve(__dirname, 'src/data/ebay-data.json');
 const ebayData = JSON.parse(fs.readFileSync(ebayDataPath, 'utf8'));
 
+const laptopDataPath = path.resolve(__dirname, 'src/data/laptops.json');
+const laptopData = JSON.parse(fs.readFileSync(laptopDataPath, 'utf8'));
+
 // Generate multiple HTML pages, adding stock data only for stocklist
 const htmlPlugins = sitePages.map(({ name, title, slug, description }) => {
   let extraData = {};
 
   if (name === "stocklist") {
     extraData.stock = stockData; // Only add stock data for stocklist.html
+  }
+  if (name === "shop-desktops") {
+    extraData.stock = stockData;
+  }
+  if (name === "shop-laptops") {
+    extraData.stock = laptopData;
   }
   if (name === "ebay") {
     extraData.data = ebayData; //
@@ -33,7 +51,7 @@ const htmlPlugins = sitePages.map(({ name, title, slug, description }) => {
   return new HtmlWebpackPlugin({
     template: `./src/templates/pages/${name}.hbs`,
     filename: slug,
-    templateParameters: { title, description, ...siteInfo, ...extraData }
+    templateParameters: { title, description, lastModified, ...siteInfo, ...extraData }
   });
 });
 
