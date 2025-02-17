@@ -2,15 +2,29 @@
 
   {{> navbar}}
 
-  {{#> hero title='<span class="fw-bold text-primary">Shop</span> In-Store'}}
+  {{#> hero title='Shop <span class="fw-bold text-primary">desktops</span>'}}
     <p class="lead mb-4">
-      {{description}}    </p>
+      {{description}}
+    </p>
   {{/hero}}
 
   <section class="container py-1">
 
-    <!-- Desktops -->
-    <h2 class="mt-5 mb-3 fw-bold">Refurbished desktops</h2>
+    <div class="container bg-primary-subtle text-dark py-3 px-5 my-3 mb-5 rounded-3">
+      <p>The listed concession price is only available to concession card holders. Please have a valid concession card ready when you make your purchase, you may purchase a desktop computer without a concession card however you will be charged our full market price.
+      <p>All desktops come with:</p>
+      <ul class="list-group list-group-flush ms-3">
+        <li>USB Keyboard and mouse set</li>
+        <li>LCD monitor</li>
+        <li>All required cables</li>
+        <li>3 Month warranty</li>
+        <li>
+          <a class="text-light d-flex align-items-center" href="/docs/linux-mint-user-guide.pdf" target="_blank" rel="noopener">
+            <i class="bi bi-file-earmark-pdf me-2"></i> User guide (PDF)
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <p class="mb-3">
       A valid concession card is required to access the concession price. Without one, desktops are available at the standard retail price.
@@ -19,7 +33,7 @@
     {{#if stock.length}}
       <div class="row">
         {{#each stock}}
-          {{> stock-item}}
+          {{> desktop-card}}
         {{/each}}
       </div>
     {{else}}

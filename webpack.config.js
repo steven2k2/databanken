@@ -117,6 +117,13 @@ export default {
     }),
     new CopyWebpackPlugin({ patterns: [{ from: 'src/images', to: 'images' }] }),
     ...htmlPlugins, // Dynamically inject HTML pages
-    new MiniCssExtractPlugin({ filename: 'assets/css/[name].[contenthash].css' })
+    new MiniCssExtractPlugin({ filename: 'assets/css/[name].[contenthash].css' }),
+    // Add this inside the `plugins` array
+    new CopyWebpackPlugin({
+      patterns: [
+        //{ from: 'src/images', to: 'images' }, // Existing images copy
+        { from: 'src/docs', to: 'docs' }      // NEW: Copy docs folder
+      ]
+    }),
   ]
 };

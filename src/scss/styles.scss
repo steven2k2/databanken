@@ -132,3 +132,17 @@ sup {
 //.footer-right span {
 //  color: #333;
 //}
+
+//.card-img-top {
+//  background-color: #f8f9fa; /* Light gray */
+//  padding: 10px; /* Optional: Adds padding around the image */
+//}
+
+.card {
+  position: relative;
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Black semi-transparent */
+  color: white;
+}
