@@ -4,7 +4,7 @@ export default {
   siteMetadata: {
     name: "Databanken",
     tagline: "Refurbished tech for a connected future.",
-    description: "Databanken is a nonprofit organization providing affordable refurbished computers and digital literacy programs for individuals and community groups in need.",
+    description: "Databanken is a nonprofit organisation providing affordable refurbished computers and digital literacy programs for individuals and community groups in need.",
     url: "https://databanken.example.com",
     logo: "/assets/images/logo.png",
     favicon: "/assets/images/favicon.ico",
@@ -28,7 +28,16 @@ export default {
       region: "Victoria",
       postalCode: "3000",
       country: "Australia"
-    }
+    },
+  openingHours: {
+    tuesday: { open: "10:00am", close: "3:30pm" },
+    thursday: { open: "10:00am", close: "3:30pm" },
+    friday: { open: "10:00am", close: "4:00pm" },
+    saturday: { open: "12:00pm", close: "4:00pm" },
+    sunday: "Closed",
+    monday: "Closed",
+    wednesday: "Closed"
+  }
   },
 
   socialMedia: {

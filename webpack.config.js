@@ -23,7 +23,13 @@ const __dirname = path.dirname(__filename);
 
 // Load stock data manually
 const stockDataPath = path.resolve(__dirname, 'src/data/stock-data.json');
-const stockData = JSON.parse(fs.readFileSync(stockDataPath, 'utf8'));
+let stockData = {};
+try {
+  stockData = JSON.parse(fs.readFileSync(stockDataPath, 'utf8'));
+} catch (error) {
+  console.warn(`Warning: Failed to load ${stockDataPath}`, error);
+}
+
 
 const ebayDataPath = path.resolve(__dirname, 'src/data/ebay-data.json');
 const ebayData = JSON.parse(fs.readFileSync(ebayDataPath, 'utf8'));
@@ -115,15 +121,16 @@ export default {
       theme_color: '#fff',
       icons: { android: true, appleIcon: true, appleStartup: true, favicons: true },
     }),
-    new CopyWebpackPlugin({ patterns: [{ from: 'src/images', to: 'images' }] }),
-    ...htmlPlugins, // Dynamically inject HTML pages
-    new MiniCssExtractPlugin({ filename: 'assets/css/[name].[contenthash].css' }),
-    // Add this inside the `plugins` array
+
     new CopyWebpackPlugin({
       patterns: [
-        //{ from: 'src/images', to: 'images' }, // Existing images copy
-        { from: 'src/docs', to: 'docs' }      // NEW: Copy docs folder
+        { from: 'src/images', to: 'images' },
+        { from: 'src/docs', to: 'docs' }
       ]
     }),
+
+    ...htmlPlugins, // Dynamically inject HTML pages
+    new MiniCssExtractPlugin({ filename: 'assets/css/[name].[contenthash].css' }),
+
   ]
 };
