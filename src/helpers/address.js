@@ -9,11 +9,11 @@
  * @param {string} [address.country] - The country name.
  * @returns {string} The formatted single-line address.
  */
-export default function address(address) {
-  if (!address || typeof address !== "object") return "";
-  const { street, city, region, postalCode, country } = address;
+export default function address (address) {
+  if (!address || typeof address !== 'object') return ''
+  const { street, city, region, postalCode, country } = address
 
   return [street, city, region, postalCode, country]
     .filter(Boolean) // Remove empty values
-    .join(", ");
+    .join(', ')
 }

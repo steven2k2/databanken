@@ -1,13 +1,13 @@
 # Databanken Demo Website
 
-This project uses **EJS (Embedded JavaScript templates)** to generate static web pages for a demo website. The static files are built from templates and assets, making it suitable for deployment on platforms like **GitHub Pages**.
+This project uses **Handlebars (Embedded JavaScript templates)** to generate static web pages for a demo website. The static files are built from templates and assets, making it suitable for deployment on platforms like **GitHub Pages**.
 
 ---
 
 ## Features
 
-- **EJS Template Rendering**: Create reusable templates for consistent design and structure.
-- **Static Site Generation**: Convert dynamic EJS templates into static HTML files.
+- **Handlebars Template Rendering**: Create reusable templates for consistent design and structure.
+- **Static Site Generation**: Convert dynamic Handlebars templates into static HTML files.
 - **Responsive Design**: Built using **Bootstrap 5** for modern, mobile-friendly layouts.
 - **Asset Management**: Automatically copies CSS, JavaScript, and image assets to the output directory.
 - **Automated Deployment**: Deploys to **GitHub Pages** using GitHub Actions.
@@ -38,8 +38,6 @@ This project uses **EJS (Embedded JavaScript templates)** to generate static web
 2. **Capture Screenshots**:
 - Click the three-dot menu in Developer Tools and select **Capture Screenshot**.
 
-
-
 ![Alt text](docs/mobile.jpg "screenshot")
 
 ## Installation
@@ -68,7 +66,7 @@ This project uses **EJS (Embedded JavaScript templates)** to generate static web
 
 ### Run the Development Server
 
-For previewing your EJS templates during development:
+For previewing your Handlebars templates during development:
 
 ```bash
 npm run dev
@@ -84,7 +82,7 @@ To generate the static files in the `dist/` directory:
 npm run build
 ```
 
-- Converts EJS templates to static HTML.
+- Converts Handlebars templates to static HTML.
 - Copies assets from the `public/` directory to `dist/public`.
 
 ---
@@ -93,7 +91,7 @@ npm run build
 
 ```
 .
-├── views/               # EJS templates
+├── views/               # Handlebars templates
 ├── public/              # Static assets (CSS, JS, images)
 ├── dist/                # Output directory for static files
 ├── app.js               # Development server
