@@ -36,6 +36,10 @@ const ebayData = JSON.parse(fs.readFileSync(ebayDataPath, 'utf8'))
 const laptopDataPath = path.resolve(__dirname, 'src/data/laptops.json')
 const laptopData = JSON.parse(fs.readFileSync(laptopDataPath, 'utf8'))
 
+
+const newsDataPath = path.resolve(__dirname, 'src/data/news.json')
+const newsData = JSON.parse(fs.readFileSync(newsDataPath, 'utf8'))
+
 // Generate multiple HTML pages, adding stock data only for stocklist
 const htmlPlugins = sitePages.map(({ name, title, slug, description }) => {
   const extraData = {}
@@ -52,6 +56,11 @@ const htmlPlugins = sitePages.map(({ name, title, slug, description }) => {
   if (name === 'ebay') {
     extraData.data = ebayData //
   }
+
+  if (name === 'news') {
+    extraData.news = newsData //
+  }
+
 
   return new HtmlWebpackPlugin({
     template: `./src/templates/pages/${name}.hbs`,

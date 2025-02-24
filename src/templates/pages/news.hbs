@@ -1,0 +1,28 @@
+{{#> layouts/simple }}
+
+  {{> navbar}}
+
+  {{#> hero title='<span class="fw-bold text-primary">News</span>'}}
+    <p class="lead mb-4">
+      {{description}}.
+    </p>
+  {{/hero}}
+
+  <section class="container py-4">
+    <div class="row">
+      {{#each news}}
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary">{{this.article_title}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{this.subtitle}}</h6>
+              <p class="card-text small text-secondary">By {{this.author.name}} | {{this.date_published}}</p>
+              <p class="card-text">{{content.body}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+{{/layouts/simple}}

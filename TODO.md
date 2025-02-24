@@ -1,0 +1,1 @@
+- **BUG**: Custom theme not applied to 404 page.

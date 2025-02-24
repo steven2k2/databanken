@@ -13,6 +13,7 @@ export default [
   { name: 'shop-desktops', title: 'shop-desktops', slug: 'shop-desktops.html', description: 'Shop desktops.' },
   { name: 'shop-laptops', title: 'Shop laptops', slug: 'shop-laptops.html', description: 'Tech for Less! Affordable Laptops at Great Prices' },
   { name: 'contact-us', title: 'Contact us', slug: 'contact-us.html', description: '' },
-  { name: 'basic', title: 'basic', slug: 'basic.html', description: '' }
+  { name: 'basic', title: 'basic', slug: 'basic.html', description: '' },
+  { name: 'news', title: 'News', slug: 'news.html', description: 'Recent news' }
 // shop-desktops.hbs
 ]

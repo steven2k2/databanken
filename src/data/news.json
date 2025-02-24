@@ -1,0 +1,71 @@
+[
+  {
+    "id": "2025-02-007",
+    "article_title": "Update: Databanken Store Closure",
+    "subtitle": "One-month lease extension",
+    "author": {
+      "name": "Johan Berg",
+      "email": "johan.berg@Databanken.no"
+    },
+    "date_published": "2025-02-07",
+    "date_modified": "2025-02-07",
+    "category": "News",
+    "tags": [
+      "Databanken",
+      "store closure",
+      "announcement"
+    ],
+    "content": {
+      "summary": "Databanken's store at Wessels gate 181, Trondheim, will remain open until the end of February for sales, service, and laptop donations.",
+      "body": "Hi all, sorry for the late notice, but we’ve managed to secure our current premises at Wessels gate 181, Trondheim for another month. So, until the end of February, we will continue to offer sales and service during our usual trading hours.\n\nWe will also continue to accept donations of laptops, so please consider us if you’re wondering what to do with your old machine."
+    },
+    "metadata": {
+      "word_count": 65,
+      "read_time": "1 min",
+      "language": "en"
+    },
+    "status": "published",
+    "image_url": "https://Databanken.no/images/Databanken-store.jpg",
+    "references": [
+      {
+        "title": "Databanken Official Website",
+        "url": "https://Databanken.no"
+      }
+    ]
+  },
+  {
+    "id": "2024-12-018",
+    "article_title": "Xmas Trading Days",
+    "subtitle": "Holiday closure and reopening schedule",
+    "author": {
+      "name": "Anders Lind",
+      "email": "anders.lind@Databanken.no"
+    },
+    "date_published": "2024-12-18",
+    "date_modified": "2024-12-18",
+    "category": "News",
+    "tags": [
+      "holiday hours",
+      "Christmas",
+      "New Year",
+      "Databanken"
+    ],
+    "content": {
+      "summary": "Databanken will close on December 24th and reopen on January 2nd, 2025. Wishing everyone a Merry Xmas and a Happy New Year!",
+      "body": "Databanken will close on Xmas eve, December 24th, and reopen on Thursday, January 2nd, 2025.\n\nDatabanken wishes all a Merry Xmas and a Happy New Year to all our customers and volunteers."
+    },
+    "metadata": {
+      "word_count": 35,
+      "read_time": "1 min",
+      "language": "en"
+    },
+    "status": "published",
+    "image_url": "https://Databanken.no/images/xmas-trading-days.jpg",
+    "references": [
+      {
+        "title": "Databanken Official Website",
+        "url": "https://Databanken.no"
+      }
+    ]
+  }
+]

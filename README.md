@@ -163,6 +163,10 @@ This project is licensed under the ISC License. See the [LICENSE](https://openso
 - [Handlebars Documentation](https://handlebarsjs.com/)
 - [Bootstrap Documentation](https://getbootstrap.com/)
 
+### Icons
+
+<a href="https://www.flaticon.com/free-icons/work-in-progress" title="work in progress icons">Work in progress icons created by Freepik - Flaticon</a>
+
 ---
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
