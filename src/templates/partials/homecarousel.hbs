@@ -15,29 +15,10 @@
     <!-- Carousel Items -->
     <div class="carousel-inner fixed-carousel">
 
-      <!-- Featured Deals Slide -->
-      <div class="carousel-item active">
-        <div class="p-5 gradient-primary text-white text-center h-100 d-flex flex-column justify-content-center">
-          <h1 class="display-4">Exclusive Deals</h1>
-          <p class="lead">
-            Discover our latest refurbished computers at unbeatable prices.
-            High-quality, affordable, and ready for you!
-          </p>
-          <a href="#shop" class="btn btn-light btn-lg">Browse Deals</a>
-        </div>
-      </div>
+      {{> carousel/deal-slide}}
 
       <!-- Available Computers Slide -->
-      <div class="carousel-item">
-        <div class="p-5 gradient-green text-white text-center h-100 d-flex flex-column justify-content-center">
-          <h1 class="display-4">Our Computers</h1>
-          <p class="lead">
-            We provide affordable, refurbished desktops and laptops
-            with Linux and open-source software pre-installed.
-          </p>
-          <a href="#computers" class="btn btn-light btn-lg">View Inventory</a>
-        </div>
-      </div>
+      {{> carousel/desktops-slide}}
 
       <!-- Volunteering Slide -->
       <div class="carousel-item">

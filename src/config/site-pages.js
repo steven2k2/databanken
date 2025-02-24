@@ -12,7 +12,7 @@ export default [
   { name: 'privacy-policy', title: 'privacy-policy', slug: 'privacy-policy.html', description: 'Read our privacy policy.' },
   { name: 'shop-desktops', title: 'shop-desktops', slug: 'shop-desktops.html', description: 'Shop desktops.' },
   { name: 'shop-laptops', title: 'Shop laptops', slug: 'shop-laptops.html', description: 'Tech for Less! Affordable Laptops at Great Prices' },
-  { name: 'contact-us', title: 'Contact us', slug: 'contact-us.html', description: '' }
-
+  { name: 'contact-us', title: 'Contact us', slug: 'contact-us.html', description: '' },
+  { name: 'basic', title: 'basic', slug: 'basic.html', description: '' }
 // shop-desktops.hbs
 ]

@@ -1,6 +1,8 @@
 // src/config/site-info.js
 
 export default {
+  headline: 'Apologies to our customers but our store will be closed this Saturday 22nd February',
+
   siteMetadata: {
     name: 'Databanken',
     tagline: 'Refurbished tech for a connected future.',
